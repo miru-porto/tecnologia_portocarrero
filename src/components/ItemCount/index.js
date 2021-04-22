@@ -1,15 +1,47 @@
-import {useState} from 'react'
+import { useState } from 'react';
+import Navbar from '../Navbar';
 
 const ItemCount = () => {
+    const [products, setProducts]= useState(
+        {
+            name:'iphone 99',
+            madeBy:'Apple',
+            description:'Muy caro'
+        },
 
-    const [dni, setDni] = useState('')
+        {
+            name:'1100',
+            madeBy:'Nokia',
+            description:'Durisimo!'
+        },
+        
+        {
+            name:'S9',
+            madeBy:'Samsung',
+            description:'Bueno'
+        },
+        
+        {
+            name:'G1',
+            madeBy:'Motorola',
+            description:'ultimo modelo'
+        },
 
-    return(
+        {
+            name:'Note 10',
+            madeBy:'Xiaomi',
+            description:'Muy recomensable'
+        }
+        )
+
+    return ( 
         <div>
-            <p>{dni}</p>
-            
-            <p>Ingrese su dni:</p>
-            <input type='text' value={dni} onChange= {(e) => setDni(e.target.value)} />
+            <Navbar products="products"/>
+            <div>
+                <div>
+                    <h4>{}</h4>
+                </div>
+            </div>
         </div>
     );
 }
