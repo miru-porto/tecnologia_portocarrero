@@ -1,5 +1,5 @@
 import './style.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ItemListContainer = ({greeting}) => {
     const [filter, setFilter] = useState('')
@@ -36,6 +36,16 @@ const ItemListContainer = ({greeting}) => {
         }]
         )
 
+    const[filteredProducts, setFilteredProducts] = useState(products)
+
+    useEffect(( )=> {
+            const newFilteredProducts = products.filter((products) => 
+            products.madeBy.toLowerCase().includes(filter.toLowerCase())
+
+            )
+            setFilteredProducts(newFilteredProducts)
+        }, [filter])
+
     console.log('filter =>', filter);
 
     return( <>
@@ -45,9 +55,15 @@ const ItemListContainer = ({greeting}) => {
             <p> Muy buena para el hogar!</p>
         </div>
          
-        <input type='text' placeholder='Search Phone' value={filter} onChange={(e) => setFilter(e.target.value)} />
+        <input
+        type='text' 
+        placeholder='Search Phone'
+        value={filter} 
+        onChange={(e) => setFilter(e.target.value)} 
+        />
+
         <div>
-            {products.map((product) =>(  
+            {filteredProducts.map((product) =>(  
                         <div className="bordesProductos">
                             <p>{`${product.madeBy} ${product.name}`}</p>
                             <p>{product.description}</p>

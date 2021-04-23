@@ -6,8 +6,8 @@ import ItemCount from './components/ItemCount';
 function App() {
     return ( <>
          <Navbar />
-         <ItemListContainer greeting="Refrigeradora Samsung" />
-         <ItemCount />
+         {/*<ItemListContainer greeting="Refrigeradora Samsung" />*/}
+         <ItemCount stock={5} initial={1}/>
          </>
          
     );

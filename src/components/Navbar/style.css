@@ -6,8 +6,18 @@
 .header{
     background-color: #1b1a17;}
 
-.navbar{
 
+.granNavbar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  
+}
+.granNavbar h1{
+    color: rgb(255, 255, 255);
+}
+
+.navbar{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -18,13 +28,7 @@
     margin-right: 25px;
     color: rgb(248, 241, 241);
 }
-.granNavbar{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin: 0px 15px 0px 60px;
-  
-}
-.granNavbar h1{
-    color: rgb(255, 255, 255);
+
+.navbarImg{
+    max-width: 45px;
 }

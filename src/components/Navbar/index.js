@@ -13,7 +13,7 @@ const Navbar = () => {
                         <li>Productos</li>
                         <li>Nosotros</li>
                         <li>Contacto</li>
-                        <li> <CartWidget/> </li>
+                        <li className="navbarImg"> <CartWidget/> </li>
                 </ul> 
             </nav>
         </div>
