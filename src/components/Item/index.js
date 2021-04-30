@@ -8,6 +8,7 @@ const Item = ({ product }) => {
       <p>{product.madeBy}</p>
       <p>{product.price}</p>
       <p>{product.description}</p>
+      <a>Ver detalles</a>
       <img className="cards_images" src={product.image} />
     </div>
   );

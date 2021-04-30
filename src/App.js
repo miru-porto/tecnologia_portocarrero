@@ -1,15 +1,20 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import ItemListContainer from "./components/ItemListContainer";
-import ItemCount from "./components/ItemCount";
+import ItemListContainer from "./pages/ItemListContainer";
+/* import ItemCount from "./components/ItemCount";
 import Item from "./components/Item";
-import ItemDetailContainer from "./components/ItemDetailContainer";
+*/
+import Celulares from "./pages/celulares";
+import Computadoras from "./pages/computadoras";
+import ItemDetailContainer from "./pages/ItemDetailContainer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+const categories = ['celulares', 'computadoras', 'camaras'];
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar categories={categories}/>
       <Switch>
         {/* <ItemCount stock={5} initial={1} /> */}
         <Route exact path="/">
@@ -18,9 +23,17 @@ function App() {
         <Route path="/detCont"> 
           <ItemDetailContainer />
         </Route>
+        <Route path="/category/:categoryId"> 
+          <ItemListContainer />
+        </Route>
+        <Route path="/category/:categoryId"> 
+          <Computadoras />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
 }
-
+/* 
+<Route path="/celu/:celuId"> 
+*/
 export default App;

@@ -1,6 +1,7 @@
 import "./style.css";
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList";
+import { useParams } from 'react-router-dom';
+import ItemList from "../../components/ItemList";
 
 const getItems = () =>
   new Promise((res, rej) => {
@@ -12,6 +13,7 @@ const getItems = () =>
           price: "$200.000",
           description: "Muy caro",
           image: "/images/iphone99.jpg",
+          categoryId: 'celulares'
         },
 
         {
@@ -20,6 +22,7 @@ const getItems = () =>
           price: "$178.000",
           description: "Durisimo!",
           image: "./images/nokia.jpg",
+          categoryId: 'celulares'
         },
 
         {
@@ -28,6 +31,7 @@ const getItems = () =>
           price: "$120.000",
           description: "Bueno",
           image: "./images/s9.webp",
+          categoryId: 'celulares'
         },
 
         {
@@ -36,6 +40,7 @@ const getItems = () =>
           madeBy: "Motorola",
           description: "ultimo modelo",
           image: "./images/moto.jpg",
+          categoryId: 'celulares'
         },
 
         {
@@ -44,21 +49,31 @@ const getItems = () =>
           madeBy: "Xiaomi",
           description: "Excelente!!",
           image: "./images/xiaomi.jpg",
+          categoryId: 'celulares'
         },
       ]);
     }, 2000);
   });
 
 const ItemListContainer = () => {
+  const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
 
   const [filteredProducts, setFilteredProducts] = useState(products);
 
   useEffect(async () => {
     const res = await getItems();
-    console.log(res);
-    setProducts(res);
-  }, []);
+    if(categoryId){
+      const result = res.filter(res => res = 'celulares');
+      console.log(result);
+      //filtro los productos x categoria. Arreglar el uso del filter q no c por q me anda mal
+
+    } else {
+      setProducts(res);
+      console.log(categoryId);
+    }
+
+  }, [categoryId]);
 
   return (
     <>

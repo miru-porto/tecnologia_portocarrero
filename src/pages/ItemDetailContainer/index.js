@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ItemDetail from "../ItemDetail";
+import ItemDetail from "../../components/ItemDetail";
 
 const getItem = new Promise((res, rej) => {
   setTimeout(() => {
