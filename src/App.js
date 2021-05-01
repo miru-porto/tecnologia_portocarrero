@@ -9,7 +9,7 @@ import Computadoras from "./pages/computadoras";
 import ItemDetailContainer from "./pages/ItemDetailContainer";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-const categories = ['celulares', 'computadoras', 'camaras'];
+const categories = ['Celulares', 'Computadoras', 'Impresoras'];
 
 function App() {
   return (
@@ -26,8 +26,9 @@ function App() {
         <Route path="/category/:categoryId"> 
           <ItemListContainer />
         </Route>
-        <Route path="/category/:categoryId"> 
-          <Computadoras />
+        
+        <Route path="/item/:itemId"> 
+          <ItemDetailContainer />
         </Route>
       </Switch>
     </BrowserRouter>
@@ -35,5 +36,8 @@ function App() {
 }
 /* 
 <Route path="/celu/:celuId"> 
+  <Route path="/category/:categoryId"> 
+          <Computadoras />
+  </Route>
 */
 export default App;

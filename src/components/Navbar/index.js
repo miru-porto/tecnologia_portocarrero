@@ -1,12 +1,21 @@
 import "./style.css";
 import CartWidget from "../CartWidget";
 import { NavLink } from "react-router-dom";
+import ItemList from "../ItemList";
 
-const Navbar = ({categories}) => {
+const Navbar = ({ categories }) => {
   return (
     <header className="header">
       <div className="granNavbar">
-        <h1>Tecnologia</h1>
+        <h1>
+          <NavLink
+            to={"/"}
+            className="navlink"
+            activeClassName="active-navlink"
+          >
+            Tecnologia
+          </NavLink>
+        </h1>
         <nav>
           <ul className="navbar">
             <li>
@@ -19,11 +28,20 @@ const Navbar = ({categories}) => {
                 Inicio
               </NavLink>
             </li>
-            {categories.map(c => {
-              return <li>
-                <NavLink to={`/category/${c}`}>{c}</NavLink>
-              </li>
+            {categories.map((c) => {
+              return (
+                <li>
+                  <NavLink
+                    to={`/category/${c}`}
+                    className="navlink"
+                    activeClassName="active-navlink"
+                  >
+                    {c}
+                  </NavLink>
+                </li>
+              );
             })}
+
             <li className="navbarImg">
               {" "}
               <CartWidget />{" "}
