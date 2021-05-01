@@ -15,6 +15,7 @@ const getItems = () =>
           description: "Cómodo",
           image: "../images/celuApple.png",
           categoryId: "Celulares",
+          itemId: "1",
         },
 
         {
