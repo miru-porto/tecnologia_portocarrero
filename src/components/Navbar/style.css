@@ -24,12 +24,13 @@
 }
 
 .active-navlink {
-  color: white;
+  color: rgb(196, 189, 189);
 }
 
 .navlink {
   list-style: none;
   margin-right: 25px;
+  color: white;
 }
 
 .navbarImg {
