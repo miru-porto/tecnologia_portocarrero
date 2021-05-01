@@ -1,10 +1,16 @@
-.cards {
+.card {
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
   border: 1px solid yellow;
+  background-color: #f3bda1;
+  width: 400px;
 }
 
-.cards_images {
-  width: 30%;
+.card_item{
+  display: flex;
+  flex-direction: column;
+}
+
+.card_image {
+  width: 46px;
 }

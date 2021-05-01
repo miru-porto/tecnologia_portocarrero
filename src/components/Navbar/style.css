@@ -3,36 +3,84 @@
   padding: 0px;
 }
 
-.header {
-  background-color: #23049d;
+.header_color{
+  background-color: #02475e;
 }
 
-.granNavbar {
+.header_title1{
+  color: #fefecc;
+  font-size: 25px;
+}
+
+.header_title1:hover{
+  color: #fefecc;
+  text-decoration: none;
+}
+
+.header_dropdown{
+  color: #fefecc;
+}
+
+.header_categories{
+  color: #687980;
+  font-size: 20px;
+}
+
+.header_categories:hover{
+  color: #687980;
+  font-size: 20px;
+  text-decoration: none;
+}
+.header_car{
+  width: 30px;
+  height: 30px;
+}
+.header_select{
+  width: 16px;
+  height: 18px;
+}
+.header_navbar {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
-.granNavbar h1 {
-  color: rgb(255, 255, 255);
+.header_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header_logo{
+  height: 60px;
+  margin: 0px 10px 0px 0px;
 }
 
-.navbar {
+.header_nav {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  align-items: center;
+  margin: 0px 24px 0px 0px;
   border: 1px red solid;
+
 }
 
 .active-navlink {
-  color: rgb(196, 189, 189);
+color: red;
 }
 
 .navlink {
   list-style: none;
   margin-right: 25px;
   color: white;
+  text-decoration: none;
 }
 
-.navbarImg {
-  max-width: 45px;
+/*
+
+.navbar-light .navbar-nav .nav-link{
+  color: #fefecc; 
 }
+
+.navbar-light .navbar-nav .nav-link:hover{
+  color: #fefecc;
+}
+*/
