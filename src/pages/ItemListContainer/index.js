@@ -15,7 +15,7 @@ const getItems = () =>
           description: "Cómodo",
           image: "../images/celuApple.png",
           categoryId: "Celulares",
-          itemId: "1",
+          id: "1",
         },
 
         {
@@ -25,6 +25,7 @@ const getItems = () =>
           description: "Durisimo!",
           image: "../images/celuNokia.png",
           categoryId: "Celulares",
+          id: "2",
         },
 
         {
@@ -34,6 +35,7 @@ const getItems = () =>
           description: "Bueno",
           image: "../images/s9.webp",
           categoryId: "Celulares",
+          id: "3",
         },
         {
           name: "Celular G1",
@@ -42,6 +44,7 @@ const getItems = () =>
           description: "ultimo modelo",
           image: "../images/moto.jpg",
           categoryId: "Celulares",
+          id: "4",
         },
         {
           name: "Celular Note 10",
@@ -50,6 +53,7 @@ const getItems = () =>
           description: "Excelente!!",
           image: "../images/xiaomi.jpg",
           categoryId: "Celulares",
+          id: "5",
         },
         {
           name: "Notebook HP",
@@ -58,6 +62,7 @@ const getItems = () =>
           description: "Perfecta para el HomeOffice",
           image: "../images/compuHp.png",
           categoryId: "Computadoras",
+          id: "6",
         },
         {
           name: "Notebook Lenovo",
@@ -66,6 +71,7 @@ const getItems = () =>
           description: "Apta para el estudio y el hogar",
           image: "../images/compuLenovo.png",
           categoryId: "Computadoras",
+          id: "7",
         },
         {
           name: "Notebook Vaio",
@@ -74,6 +80,7 @@ const getItems = () =>
           description: "Lista para su uso",
           image: "../images/compuVaio.png",
           categoryId: "Computadoras",
+          id: "8",
         },
         {
           name: "Notebook Asus",
@@ -82,6 +89,7 @@ const getItems = () =>
           description: "Muy óptima",
           image: "../images/compuAsus.png",
           categoryId: "Computadoras",
+          id: "9",
         },
         {
           name: "Impresora HP",
@@ -90,6 +98,7 @@ const getItems = () =>
           description: "Preciosa",
           image: "../images/impreHp.png",
           categoryId: "Impresoras",
+          id: "10",
         },
         {
           name: "Impresora Canon",
@@ -98,6 +107,7 @@ const getItems = () =>
           description: "Multifución",
           image: "../images/impreCanon.png",
           categoryId: "Impresoras",
+          id: "11",
         },
         {
           name: "Impresora Epson",
@@ -106,6 +116,7 @@ const getItems = () =>
           description: "De muy buena calidad",
           image: "../images/impreEpson.png",
           categoryId: "Impresoras",
+          id: "12",
         },
         {
           name: "Impresora Brother",
@@ -114,6 +125,7 @@ const getItems = () =>
           description: "Hace las mejores impresiones",
           image: "../images/impreBrother.png",
           categoryId: "Impresoras",
+          id: "13",
         },
       ]);
     }, 2000);
@@ -133,13 +145,14 @@ const ItemListContainer = () => {
     const res = await getItems();
     if (categoryId) {
       const result = res.filter((res) => res.categoryId == categoryId);
-      console.log("si hay id");
+      console.log("¡Productos, vengan a mí! ✨");
       console.log(result);
       setProducts(result);
 
       //filtro los productos x categoria. Arreglar el uso del filter q no c por q me anda mal
     } else {
       setProducts(res);
+      console.log("¡Mirá todos los productos! 👇");
       console.log(categoryId);
     }
     setLoading(false);

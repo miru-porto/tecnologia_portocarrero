@@ -20,14 +20,12 @@ function App() {
         <Route exact path="/">
           <ItemListContainer />
         </Route>
-        <Route path="/detCont"> 
-          <ItemDetailContainer />
-        </Route>
+        
         <Route path="/category/:categoryId"> 
           <ItemListContainer />
         </Route>
         
-        <Route path="/item/:itemId"> 
+        <Route path="/item/:itemId" > 
           <ItemDetailContainer />
         </Route>
       </Switch>
