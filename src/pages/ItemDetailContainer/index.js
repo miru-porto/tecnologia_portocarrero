@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "../../components/ItemDetail";
-
-//para ver esto tengo que poner la ruta: /item/item TERMINARRRR ESTEEE
+import Loader from "react-loader-spinner";
 
 const getItems = () =>
   new Promise((res, rej) => {
@@ -13,7 +12,8 @@ const getItems = () =>
           madeBy: "Indrustrias Apple",
           price: "$300.000",
           description: "Cómodo",
-          image: "../images/celuApple.png",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77905202_1.Jpg",
           categoryId: "Celulares",
           id: "1",
         },
@@ -133,6 +133,7 @@ const getItems = () =>
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
   const { itemId } = useParams();
 
   useEffect(async () => {
@@ -141,13 +142,21 @@ const ItemDetailContainer = () => {
     console.log("¡Producto con más dellate, ven a mí! ✨");
     console.log(p);
     setProduct(p);
+    setLoading(false);
   }, [itemId]);
 
   return (
     <>
-      <ItemDetail product={product} />
+      {loading ? (
+        <Loader type="ThreeDots" color="#00BFFF" height={80} width={80}/>
+      ) : (
+        <ItemDetail product={product} />
+      )}
     </>
   );
 };
 
 export default ItemDetailContainer;
+/* 
+<ItemDetail product={product} />
+*/

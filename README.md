@@ -1,6 +1,6 @@
 # Mi Proyecto
 
-Este proyecto tiene la finalidad de ser un e-commerce encargado de la comercialización de dispositivos electrónicos.
+Este proyecto tiene la finalidad de ser un e-commerce encargado de la comercialización de adornos y accesorios.
 
 ## Dependencias
 

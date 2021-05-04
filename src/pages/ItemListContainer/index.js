@@ -13,7 +13,8 @@ const getItems = () =>
           madeBy: "Indrustrias Apple",
           price: "$300.000",
           description: "Cómodo",
-          image: "../images/celuApple.png",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77905202_1.Jpg",
           categoryId: "Celulares",
           id: "1",
         },
@@ -138,8 +139,6 @@ const ItemListContainer = () => {
 
   const [filteredProducts, setFilteredProducts] = useState(products);
 
-  //== -> compara valores  1 == "1" (true)
-  //=== -> tipo de dato y valor 1 === "1" (false)
   useEffect(async () => {
     setLoading(true);
     const res = await getItems();
@@ -161,7 +160,7 @@ const ItemListContainer = () => {
   return (
     <>
       {loading ? (
-        <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+        <Loader type="ThreeDots" color="#00BFFF" height={80} width={80}/>
       ) : (
         <ItemList products={products} />
       )}

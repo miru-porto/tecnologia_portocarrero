@@ -4,16 +4,16 @@
 }
 
 .header_color{
-  background-color: #02475e;
+  background-color: #e4e4e4;
 }
 
 .header_title1{
-  color: #fefecc;
+  color: black;
   font-size: 25px;
 }
 
 .header_title1:hover{
-  color: #fefecc;
+  color: black;
   text-decoration: none;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .header_categories{
-  color: #687980;
+  color: black;
   font-size: 20px;
 }
 
