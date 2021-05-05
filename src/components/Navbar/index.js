@@ -16,7 +16,7 @@ const Navbarc = ({ categories }) => {
       <Navbar.Brand>
         <img src="../images/logo.png" className="header_logo" />
         <NavLink to={"/"} className="header_title1">
-          Tecnologia
+          Bijouterie
         </NavLink>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

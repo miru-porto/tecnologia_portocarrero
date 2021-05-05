@@ -16,6 +16,7 @@ const getItems = () =>
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77905202_1.Jpg",
           categoryId: "Celulares",
           id: "1",
+          stock: "4",
         },
 
         {
@@ -26,6 +27,7 @@ const getItems = () =>
           image: "../images/celuNokia.png",
           categoryId: "Celulares",
           id: "2",
+          stock: "5",
         },
 
         {
@@ -36,6 +38,7 @@ const getItems = () =>
           image: "../images/s9.webp",
           categoryId: "Celulares",
           id: "3",
+          stock: "3",
         },
         {
           name: "Celular G1",
@@ -45,6 +48,7 @@ const getItems = () =>
           image: "../images/moto.jpg",
           categoryId: "Celulares",
           id: "4",
+          stock: "6",
         },
         {
           name: "Celular Note 10",
@@ -54,6 +58,7 @@ const getItems = () =>
           image: "../images/xiaomi.jpg",
           categoryId: "Celulares",
           id: "5",
+          stock: "4",
         },
         {
           name: "Notebook HP",
@@ -63,6 +68,7 @@ const getItems = () =>
           image: "../images/compuHp.png",
           categoryId: "Computadoras",
           id: "6",
+          stock: "2",
         },
         {
           name: "Notebook Lenovo",
@@ -72,6 +78,7 @@ const getItems = () =>
           image: "../images/compuLenovo.png",
           categoryId: "Computadoras",
           id: "7",
+          stock: "6",
         },
         {
           name: "Notebook Vaio",
@@ -81,6 +88,7 @@ const getItems = () =>
           image: "../images/compuVaio.png",
           categoryId: "Computadoras",
           id: "8",
+          stock: "5",
         },
         {
           name: "Notebook Asus",
@@ -90,6 +98,7 @@ const getItems = () =>
           image: "../images/compuAsus.png",
           categoryId: "Computadoras",
           id: "9",
+          stock: "4",
         },
         {
           name: "Impresora HP",
@@ -99,6 +108,7 @@ const getItems = () =>
           image: "../images/impreHp.png",
           categoryId: "Impresoras",
           id: "10",
+          stock: "6",
         },
         {
           name: "Impresora Canon",
@@ -108,6 +118,7 @@ const getItems = () =>
           image: "../images/impreCanon.png",
           categoryId: "Impresoras",
           id: "11",
+          stock: "5",
         },
         {
           name: "Impresora Epson",
@@ -117,6 +128,7 @@ const getItems = () =>
           image: "../images/impreEpson.png",
           categoryId: "Impresoras",
           id: "12",
+          stock: "8",
         },
         {
           name: "Impresora Brother",
@@ -126,6 +138,7 @@ const getItems = () =>
           image: "../images/impreBrother.png",
           categoryId: "Impresoras",
           id: "13",
+          stock: "7",
         },
       ]);
     }, 2000);

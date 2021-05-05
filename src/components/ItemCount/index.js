@@ -27,11 +27,13 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           más
         </button>
       </div>
-      <button className="carBtnAgregar" onClick={onAdd}>
+      <button className="carBtnAgregar" onClick={()=>onAdd(count)}>
         Agregar al carrito
       </button>
     </div>
   );
 };
-
+/*
+<button onClick={finish}>Terminar</button>
+*/
 export default ItemCount;
