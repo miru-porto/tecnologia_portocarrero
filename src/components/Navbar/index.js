@@ -14,7 +14,7 @@ const Navbarc = ({ categories }) => {
   return (
     <Navbar className="header_color" expand="lg">
       <Navbar.Brand>
-        <img src="../images/logo.png" className="header_logo" />
+        <img src="../images/estrella.png" className="header_logo" />
         <NavLink to={"/"} className="header_title1">
           Bijouterie
         </NavLink>
@@ -28,24 +28,24 @@ const Navbarc = ({ categories }) => {
             className="header_dropdown"
           >
             <NavDropdown.Item>
-              <NavLink to={"/category/Celulares"} className="header_categories">
-                Celulares
+              <NavLink to={"/category/collares"} className="header_categories">
+                Collares
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
               <NavLink
-                to={"/category/Computadoras"}
+                to={"/category/aros"}
                 className="header_categories"
               >
-                Computadoras
+                Aros
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
               <NavLink
-                to={"/category/Impresoras"}
+                to={"/category/anillos"}
                 className="header_categories"
               >
-                Impresoras
+                Anillos
               </NavLink>
             </NavDropdown.Item>
           </NavDropdown>

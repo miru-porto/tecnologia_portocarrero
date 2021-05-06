@@ -2,131 +2,118 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../../components/ItemList";
-import Loader from "react-loader-spinner";
+import Loader from "../../components/Loader";
 
 const getItems = () =>
   new Promise((res, rej) => {
     setTimeout(() => {
       res([
         {
-          name: "Celular iphone 11 pro max",
-          madeBy: "Indrustrias Apple",
-          price: "$300.000",
-          description: "Cómodo",
+          name: "Collar Cadena corta con dije para compartir",
+          price: "ARS$549,00",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77905202_1.Jpg",
-          categoryId: "Celulares",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77877203_1.Jpg",
+          categoryId: "collares",
           id: "1",
         },
 
         {
-          name: "Celular Plateado",
-          madeBy: "Indrustrias Nokia",
-          price: "$49.000",
-          description: "Durisimo!",
-          image: "../images/celuNokia.png",
-          categoryId: "Celulares",
+          name: "Collar místico",
+          price: "ARS$399,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77712601_1.Jpg",
+          categoryId: "collares",
           id: "2",
         },
 
         {
-          name: "Celular S9",
-          madeBy: "Samsung",
-          price: "$120.000",
-          description: "Bueno",
-          image: "../images/s9.webp",
-          categoryId: "Celulares",
+          name: "Cadena corta con dije para compartir",
+          price: "ARS$499,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77879801_1.Jpg",
+          categoryId: "collares",
           id: "3",
         },
         {
-          name: "Celular G1",
-          price: "$90.000",
-          madeBy: "Motorola",
-          description: "ultimo modelo",
-          image: "../images/moto.jpg",
-          categoryId: "Celulares",
+          name: "Choker set",
+          price: "ARS$549,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77891201_2.Jpg",
+          categoryId: "collares",
           id: "4",
         },
         {
-          name: "Celular Note 10",
-          price: "$100.000",
-          madeBy: "Xiaomi",
-          description: "Excelente!!",
-          image: "../images/xiaomi.jpg",
-          categoryId: "Celulares",
+          name: "Cadena corta para compartir",
+          price: "ARS$499,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77879601_1.Jpg",
+          categoryId: "collares",
           id: "5",
         },
         {
-          name: "Notebook HP",
-          price: "$90.646",
-          madeBy: "Industrias Hp",
-          description: "Perfecta para el HomeOffice",
-          image: "../images/compuHp.png",
-          categoryId: "Computadoras",
+          name: "Aros argollas con corazon",
+          price: "ARS$249,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77878901_1.Jpg",
+          categoryId: "aros",
           id: "6",
         },
         {
-          name: "Notebook Lenovo",
-          price: "$99.000",
-          madeBy: "Industrias Lenovo",
-          description: "Apta para el estudio y el hogar",
-          image: "../images/compuLenovo.png",
-          categoryId: "Computadoras",
+          name: "Argollas gold",
+          price: "ARS$149,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77356701_1.Jpg",
+          categoryId: "aros",
           id: "7",
         },
         {
-          name: "Notebook Vaio",
-          price: "$89.000",
-          madeBy: "Industrias Vaio",
-          description: "Lista para su uso",
-          image: "../images/compuVaio.png",
-          categoryId: "Computadoras",
+          name: "Aros pasantes de perla",
+          price: "ARS$129,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77292201.Jpg",
+          categoryId: "aros",
           id: "8",
         },
         {
-          name: "Notebook Asus",
-          price: "$189.000",
-          madeBy: "Industrias Asus",
-          description: "Muy óptima",
-          image: "../images/compuAsus.png",
-          categoryId: "Computadoras",
+          name: "Aros sets con cuff",
+          price: "ARS$399,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77876801_1.Jpg",
+          categoryId: "aros",
           id: "9",
         },
         {
-          name: "Impresora HP",
-          price: "$10.439",
-          madeBy: "Industrias Asus",
-          description: "Preciosa",
-          image: "../images/impreHp.png",
-          categoryId: "Impresoras",
+          name: "Set de anillos de metal",
+          price: "ARS$499,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77154601.Jpg",
+          categoryId: "anillos",
           id: "10",
         },
         {
-          name: "Impresora Canon",
-          price: "$32.999",
-          madeBy: "Industrias Canon",
-          description: "Multifución",
-          image: "../images/impreCanon.png",
-          categoryId: "Impresoras",
+          name: "Sets anillos con piedra",
+          price: "ARS$399,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77902201_1.Jpg",
+          categoryId: "anillos",
           id: "11",
         },
         {
-          name: "Impresora Epson",
-          price: "$13.399",
-          madeBy: "Industrias Epson",
-          description: "De muy buena calidad",
-          image: "../images/impreEpson.png",
-          categoryId: "Impresoras",
+          name: "Anillo chico con strass",
+          price: "ARS$149,00",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77288403.Jpg",
+          categoryId: "anillos",
           id: "12",
+          stock: "8",
         },
         {
-          name: "Impresora Brother",
-          price: "$46.985",
-          madeBy: "Industrias Brother",
-          description: "Hace las mejores impresiones",
-          image: "../images/impreBrother.png",
-          categoryId: "Impresoras",
+          name: "Anillo ethnic",
+          price: "ARS$299,00",
+          image: "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77715204.Jpg",
+          categoryId: "anillos",
           id: "13",
+          stock: "7",
         },
       ]);
     }, 2000);
@@ -160,7 +147,7 @@ const ItemListContainer = () => {
   return (
     <>
       {loading ? (
-        <Loader type="ThreeDots" color="#00BFFF" height={80} width={80}/>
+        <Loader/>
       ) : (
         <ItemList products={products} />
       )}
