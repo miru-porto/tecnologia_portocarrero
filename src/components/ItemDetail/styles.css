@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: start;
     padding-left: 50px;
+    width: 50%;
 }
 
 .cardDetail_name{
