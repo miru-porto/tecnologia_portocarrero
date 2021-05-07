@@ -19,12 +19,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     <div className="">
       <p className="carNombre">Producto X</p>
       <div className="carHorizonal">
-        <button className="carBtns" onClick={resta} disabled={count <= initial}>
-          menos
-        </button>
         <p>{count}</p>
+        <button className="carBtns" onClick={resta} disabled={count <= initial}>
+          -
+        </button>
         <button className="carBtns" onClick={suma} disabled={count >= stock}>
-          más
+          +
         </button>
       </div>
       <button className="carBtnAgregar" onClick={()=>onAdd(count)}>

@@ -5,10 +5,11 @@ body{
 .card {
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
-  background-color: #f3bda1;
-  width: 400px;
-  margin: 30px 0;
+  /*
+  background-color: #f3bda1; 
+  */
+  margin-bottom: 20px;
+  border: 1px solid transparent;
 }
 
 .card_item{
@@ -16,13 +17,38 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .card_image {
-  width: 300px; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0.00000005px solid rgba(211, 211, 211, 0.411);
+  /*
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  transition: 300ms;
+  */
 }
-
-.card_image:hover {
+.card_name{
   width: 300px;
-  border: 1px solid gray; 
+  text-align: center;
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  color: black;
+}
+.card_price{
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: black;
+  text-decoration: none;
 }

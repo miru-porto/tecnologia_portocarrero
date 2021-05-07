@@ -6,12 +6,13 @@ const Item = ({ product }) => {
   return (
     <div className="card">
       <div className="card_item">
+        <Link to={`/item/${product.id}`}>
         <img className="card_image" src={product.image} />
-        <h2>{product.name}</h2>
+        <h2 className="card_name">{product.name}</h2>
         <p>{product.madeBy}</p>
-        <p>{product.price}</p>
+        <p className="card_price">ARS${product.price}</p>
         <p>{product.description}</p>
-        <Link to={`/item/${product.id}`}>Ver más detalles</Link>
+        </Link>
       </div>
     </div>
   );

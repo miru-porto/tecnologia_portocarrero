@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import ItemCount from "../ItemCount";
+import "./styles.css";
 
 const ItemDetail = ({ product }) => {
   const [showButton, setShowButton] = useState(false);
@@ -12,16 +13,24 @@ const ItemDetail = ({ product }) => {
 
   return (
     <>
-      <h2>{product.name}</h2>
-      <p>{product.madeBy}</p>
-      <p>{product.price}</p>
-      <p>{product.description}</p>
-      <img src={product.image} />
-      {showButton ? (
-        <button onClick={() => history.push("/cart")}>Terminar compra</button>
-      ) : (
-        <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
-      )}
+      <div className="cardDetail">
+        <div className="cardDetail_1">
+          <img className="cardDetail_img" src={product.image} />
+        </div>
+        <div className="cardDetail_info">
+          <h2 className="cardDetail_name">{product.name}</h2>
+          <p className="cardDetail_price">ARS${product.price}</p>
+          <p className="cardDetail_id">Nº Artículo: {product.id}</p>
+          {showButton ? (
+            <button onClick={() => history.push("/cart")}>
+              Terminar compra
+            </button>
+          ) : (
+            <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+          )}
+          <p>{product.description}</p>
+        </div>
+      </div>
     </>
   );
 };
