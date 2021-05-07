@@ -83,10 +83,10 @@ const getItems = () =>
           id: "9",
         },
         {
-          name: "Set de anillos de metal",
+          name: "Set de anillos ethnic",
           price: "499,00",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77154601.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77699601.Jpg",
           categoryId: "anillos",
           id: "10",
         },

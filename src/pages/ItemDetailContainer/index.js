@@ -27,7 +27,7 @@ const getItems = () =>
           description:
             "Collar largo con dijes de ojo, mano y redondo con relieve",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77712601_1.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77712601_1.Jpg",
           categoryId: "collares",
           id: "2",
           stock: "5",
@@ -40,7 +40,7 @@ const getItems = () =>
           description:
             "Cadena corta con dije para compartir bff de palta corazono",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77879801_1.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77879801_1.Jpg",
           categoryId: "collares",
           id: "3",
           stock: "3",
@@ -51,7 +51,7 @@ const getItems = () =>
           description:
             "Choker set con cadenas delicadas con detalles esmaltados, chapitas de metal y dije de vibora",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77891201_2.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77891201_1.Jpg",
           categoryId: "collares",
           id: "4",
           stock: "6",
@@ -61,7 +61,7 @@ const getItems = () =>
           price: "499,00",
           description: "Cadena corta con dije para compartir bff de unicornios",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77879601_1.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77879601_1.Jpg",
           categoryId: "collares",
           id: "5",
           stock: "4",
@@ -71,7 +71,7 @@ const getItems = () =>
           price: "249,00",
           description: "Aros argolla con dije de corazon esmaltado",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77878901_1.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77878901_1.Jpg",
           categoryId: "aros",
           id: "6",
           stock: "2",
@@ -81,7 +81,7 @@ const getItems = () =>
           price: "149,00",
           description: "Aros argolla doble plana 3 cm",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77356701_1.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77356701_1.Jpg",
           categoryId: "aros",
           id: "7",
           stock: "6",
@@ -91,7 +91,7 @@ const getItems = () =>
           price: "129,00",
           description: "Aros pasantes perlas 10 mm",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77292201.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77292201.Jpg",
           categoryId: "aros",
           id: "8",
           stock: "5",
@@ -102,17 +102,17 @@ const getItems = () =>
           description:
             "Aros set por 8 piezas: 2 argollas, 2 pasantes, 1 colgante corto y 3 cuff",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77876801_1.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77876801_1.Jpg",
           categoryId: "aros",
           id: "9",
           stock: "4",
         },
         {
-          name: "Set de anillos de metal",
+          name: "Set de anillos ethnic",
           price: "499,00",
           description: "Set de 8 anillos labrados, 2 con piedras",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77154601.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77699601.Jpg",
           categoryId: "anillos",
           id: "10",
           stock: "6",
@@ -122,7 +122,7 @@ const getItems = () =>
           price: "399,00",
           description: "Sets Anillos por seis de piedra grandes",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77902201_1.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77902201_1.Jpg",
           categoryId: "anillos",
           id: "11",
           stock: "5",
@@ -132,7 +132,7 @@ const getItems = () =>
           price: "149,00",
           description: "Anillo fino con 1 piedra de strass grande engarzado",
           image:
-            "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77288403.Jpg",
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77288403.Jpg",
           categoryId: "anillos",
           id: "12",
           stock: "8",
@@ -141,7 +141,8 @@ const getItems = () =>
           name: "Anillo ethnic",
           price: "299,00",
           description: "Anillo con piedra y relieve bajo",
-          image: "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77715204.Jpg",
+          image:
+            "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77715204.Jpg",
           categoryId: "anillos",
           id: "13",
           stock: "7",
@@ -164,15 +165,7 @@ const ItemDetailContainer = () => {
     setLoading(false);
   }, [itemId]);
 
-  return (
-    <>
-      {loading ? (
-        <Loader  />
-      ) : (
-        <ItemDetail product={product} />
-      )}
-    </>
-  );
+  return <>{loading ? <Loader /> : <ItemDetail product={product} />}</>;
 };
 
 export default ItemDetailContainer;

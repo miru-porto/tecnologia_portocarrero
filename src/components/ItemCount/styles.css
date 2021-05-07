@@ -3,16 +3,41 @@
 }
 
 .carHorizonal{
-    border: 1px solid hotpink;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
 }
-.carBtnAgregar{
+.carText{
+    font-weight: 600;
+    font-size: 15px;
+    margin: auto 0;
+}
+.carCount{
+    border: 1px solid lightgrey;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin: 0 0 0 10px;
+    font-size: 14px;
+}
+.carContainer{
     display: flex;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .carBtns{
-    background-color: orange;
+    background-color: transparent;
+    border: none;
+    width: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 12px;
+}
+
+.carBtnAgregar{
+    display: flex;
+    margin: 0 auto;
 }
