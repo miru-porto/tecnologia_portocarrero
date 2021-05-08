@@ -131,14 +131,12 @@ const ItemListContainer = () => {
     const res = await getItems();
     if (categoryId) {
       const result = res.filter((res) => res.categoryId == categoryId);
-      console.log("¡Productos, vengan a mí! ✨");
       console.log(result);
       setProducts(result);
 
       //filtro los productos x categoria
     } else {
       setProducts(res);
-      console.log("¡Mirá todos los productos! 👇");
       console.log(categoryId);
     }
     setLoading(false);

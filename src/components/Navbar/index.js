@@ -1,6 +1,7 @@
 import "./style.css";
-import CartWidget from "../CartWidget";
 import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import {CartContext} from '../../context/cartContext';
 import {
   Navbar,
   Nav,
@@ -10,7 +11,9 @@ import {
   Button,
 } from "react-bootstrap";
 
-const Navbarc = ({ categories }) => {
+const Navbarc = () => {
+  const {quantity} = useContext(CartContext)
+
   return (
     <Navbar className="header_color" expand="lg">
       <Navbar.Brand>
@@ -33,24 +36,18 @@ const Navbarc = ({ categories }) => {
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <NavLink
-                to={"/category/aros"}
-                className="header_categories"
-              >
+              <NavLink to={"/category/aros"} className="header_categories">
                 Aros
               </NavLink>
             </NavDropdown.Item>
             <NavDropdown.Item>
-              <NavLink
-                to={"/category/anillos"}
-                className="header_categories"
-              >
+              <NavLink to={"/category/anillos"} className="header_categories">
                 Anillos
               </NavLink>
             </NavDropdown.Item>
           </NavDropdown>
           <img src="../images/carro-de-la-compra.png" className="header_car" />
-          <input placeholder="0" className="header_select" />
+          <p className="header_select">({quantity})</p>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />

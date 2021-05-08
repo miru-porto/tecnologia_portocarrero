@@ -39,7 +39,5 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     </div>
   );
 };
-/*
-<button onClick={finish}>Terminar</button>
-*/
+
 export default ItemCount;

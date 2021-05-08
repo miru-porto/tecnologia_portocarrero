@@ -23,12 +23,13 @@ const ItemDetail = ({ product }) => {
           <p className="cardDetail_id">Nº Artículo: {product.id}</p>
           {showButton ? (
             <button onClick={() => history.push("/cart")}>
-              Terminar compra
+              Ir al carrito
             </button>
           ) : (
             <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
           )}
           <p>{product.description}</p>
+          
         </div>
       </div>
     </>

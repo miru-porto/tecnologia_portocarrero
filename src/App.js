@@ -9,31 +9,35 @@ import Item from "./components/Item";
 import ItemDetailContainer from "./pages/ItemDetailContainer";
 import Cart from "./components/Cart";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import { CartProvider } from "./context/cartContext";
+/*
 const categories = ["Celulares", "Computadoras", "Impresoras"];
+*/
 
 function App() {
+
   return (
     <BrowserRouter>
-      <Navbar categories={categories} />
-      <Switch>
-        {/* <ItemCount stock={5} initial={1} /> */}
-        <Route exact path="/">
-          <ItemListContainer />
-        </Route>
+      <CartProvider>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <ItemListContainer />
+          </Route>
 
-        <Route path="/category/:categoryId">
-          <ItemListContainer />
-        </Route>
+          <Route path="/category/:categoryId">
+            <ItemListContainer />
+          </Route>
 
-        <Route path="/item/:itemId">
-          <ItemDetailContainer />
-        </Route>
+          <Route path="/item/:itemId">
+            <ItemDetailContainer />
+          </Route>
 
-        <Route path="/cart">
-          <Cart />
-        </Route>
-      </Switch>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+        </Switch>
+      </CartProvider>
     </BrowserRouter>
   );
 }

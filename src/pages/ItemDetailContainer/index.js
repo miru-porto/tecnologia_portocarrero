@@ -159,7 +159,6 @@ const ItemDetailContainer = () => {
   useEffect(async () => {
     const res = await getItems();
     const p = res.find((pr) => pr.id === itemId);
-    console.log("¡Producto con más dellate, ven a mí! ✨");
     console.log(p);
     setProduct(p);
     setLoading(false);
