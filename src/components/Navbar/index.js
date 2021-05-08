@@ -1,7 +1,7 @@
 import "./style.css";
 import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
-import {CartContext} from '../../context/cartContext';
+import { CartContext } from "../../context/cartContext";
 import {
   Navbar,
   Nav,
@@ -12,7 +12,7 @@ import {
 } from "react-bootstrap";
 
 const Navbarc = () => {
-  const {quantity} = useContext(CartContext)
+  const { getSize } = useContext(CartContext);
 
   return (
     <Navbar className="header_color" expand="lg">
@@ -47,7 +47,7 @@ const Navbarc = () => {
             </NavDropdown.Item>
           </NavDropdown>
           <img src="../images/carro-de-la-compra.png" className="header_car" />
-          <p className="header_select">({quantity})</p>
+          <p className="header_select">({getSize()})</p>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />

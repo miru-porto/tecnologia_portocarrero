@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import {useContext} from "react";
+import {CartContext} from '../../context/cartContext';
 import ItemCount from "../ItemCount";
 import "./styles.css";
 
 const ItemDetail = ({ product }) => {
   const [showButton, setShowButton] = useState(false);
   const history = useHistory();
-  const onAdd = (e) => {
-    console.log(e);
+  const { addToCart } = useContext(CartContext);
+
+  const onAdd = (count) => {
+    console.log(count);
     setShowButton(true);
+    addToCart(count, product);
   };
 
   return (
