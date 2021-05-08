@@ -1,6 +1,7 @@
 import "./style.css";
 import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
+import CartWidget from "../CartWidget";
 import { CartContext } from "../../context/cartContext";
 import {
   Navbar,
@@ -46,7 +47,7 @@ const Navbarc = () => {
               </NavLink>
             </NavDropdown.Item>
           </NavDropdown>
-          <img src="../images/carro-de-la-compra.png" className="header_car" />
+          <CartWidget />
           <p className="header_select">({getSize()})</p>
         </Nav>
         <Form inline>
@@ -60,7 +61,9 @@ const Navbarc = () => {
 
 export default Navbarc;
 
-/*<header className="header">
+/*
+<img src="../images/carro-de-la-compra.png" className="header_car" />
+<header className="header">
       <div className="header_navbar">
         <div className="header_1">
           <img src="../images/logo.png" className="header_logo" />

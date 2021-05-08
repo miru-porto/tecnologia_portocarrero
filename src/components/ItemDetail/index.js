@@ -27,7 +27,7 @@ const ItemDetail = ({ product }) => {
           <p className="cardDetail_price">ARS${product.price}</p>
           <p className="cardDetail_id">Nº Artículo: {product.id}</p>
           {showButton ? (
-            <button onClick={() => history.push("/cart")}>
+            <button onClick={() => history.push("/cart")} className="cardDetail_btn">
               Ir al carrito
             </button>
           ) : (
