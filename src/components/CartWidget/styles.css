@@ -1,26 +1,49 @@
-.img{
-    width: 30px;
+.img {
+  width: 30px;
 }
 
-.modal{
-    display: none;
-    position: absolute;
+.modal {
+  display: none;
+  position: absolute;
 }
-.cartWidgetContainer{
-    position: relative;
+.cartWidgetContainer {
+  position: relative;
 }
-.cartWidgetContainer:hover .modal{
-    display: block;
-    right: 0;
-    top: 70px;
-    bottom: 0;
-    color: #000;
-    background: #fff;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0px 1px hotpink;
-    width: 300px;
-    height: 20vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.cartWidgetContainer:hover .modal {
+  display: block;
+  right: 0;
+  top: 65px;
+  bottom: 0;
+  width: 410px;
+  height: fit-content;
+  /*hacer que el height crezca
+  a medida que los productos van ocupando espacio*/
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px 1px hotpink;
+  background: #fff;
+}
+.title {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  border: 1px solid blue;
+  margin: 10px 0 0 6px;
+}
+.title p {
+  margin: 0 140px 0 6px;
+  font-weight: 500;
+}
+.infoFather {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid yellow;
+  margin: 0 0 0 6px;
+}
+
+.infoSon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 258px;
 }
