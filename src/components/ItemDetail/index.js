@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import {useContext} from "react";
-import {CartContext} from '../../context/cartContext';
+import { useContext } from "react";
+import { CartContext } from "../../context/cartContext";
 import ItemCount from "../ItemCount";
 import "./styles.css";
 
@@ -9,6 +9,7 @@ const ItemDetail = ({ product }) => {
   const [showButton, setShowButton] = useState(false);
   const history = useHistory();
   const { addToCart } = useContext(CartContext);
+  const { removeFromCart } = useContext(CartContext);
 
   const onAdd = (count) => {
     console.log(count);
@@ -27,14 +28,16 @@ const ItemDetail = ({ product }) => {
           <p className="cardDetail_price">ARS${product.price}</p>
           <p className="cardDetail_id">Nº Artículo: {product.id}</p>
           {showButton ? (
-            <button onClick={() => history.push("/cart")} className="cardDetail_btn">
+            <button
+              onClick={() => history.push("/cart")}
+              className="cardDetail_btn"
+            >
               Ir al carrito
             </button>
           ) : (
             <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
           )}
           <p>{product.description}</p>
-          
         </div>
       </div>
     </>

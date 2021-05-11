@@ -4,7 +4,6 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  /* const [quantity, setQuantity] = useState(0); */
 
   useEffect(() => {
     console.log(cart);
@@ -32,7 +31,7 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((acc, p) => acc + p.qty, 0);
   };
 
-  const removeFromCard = (productId) => {
+  const removeFromCart = (productId) => {
     const newCart = cart.filter((product) => product.id !== productId);
     setCart(newCart);
   };
@@ -45,7 +44,7 @@ export const CartProvider = ({ children }) => {
 
   //logica del context
   return (
-    <CartContext.Provider value={{ cart, addToCart, getSize }}>
+    <CartContext.Provider value={{ cart, addToCart, getSize, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

@@ -168,6 +168,3 @@ const ItemDetailContainer = () => {
 };
 
 export default ItemDetailContainer;
-/* 
-<ItemDetail product={product} />
-*/
