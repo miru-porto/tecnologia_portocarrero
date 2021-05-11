@@ -10,7 +10,7 @@ const getItems = () =>
       res([
         {
           name: "Collar Cadena corta con dije para compartir",
-          price: "549,00",
+          price: "549",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77877203_1.Jpg",
           categoryId: "collares",
@@ -19,7 +19,7 @@ const getItems = () =>
 
         {
           name: "Collar místico",
-          price: "399,00",
+          price: "399",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77712601_1.Jpg",
           categoryId: "collares",
@@ -28,7 +28,7 @@ const getItems = () =>
 
         {
           name: "Cadena corta con dije para compartir",
-          price: "499,00",
+          price: "499",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77879801_1.Jpg",
           categoryId: "collares",
@@ -36,7 +36,7 @@ const getItems = () =>
         },
         {
           name: "Choker set",
-          price: "549,00",
+          price: "549",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77891201_2.Jpg",
           categoryId: "collares",
@@ -44,7 +44,7 @@ const getItems = () =>
         },
         {
           name: "Cadena corta para compartir",
-          price: "499,00",
+          price: "499",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77879601_1.Jpg",
           categoryId: "collares",
@@ -52,7 +52,7 @@ const getItems = () =>
         },
         {
           name: "Aros argollas con corazon",
-          price: "249,00",
+          price: "249",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77878901_1.Jpg",
           categoryId: "aros",
@@ -60,7 +60,7 @@ const getItems = () =>
         },
         {
           name: "Argollas gold",
-          price: "149,00",
+          price: "149",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77356701_1.Jpg",
           categoryId: "aros",
@@ -68,7 +68,7 @@ const getItems = () =>
         },
         {
           name: "Aros pasantes de perla",
-          price: "129,00",
+          price: "129",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77292201.Jpg",
           categoryId: "aros",
@@ -76,7 +76,7 @@ const getItems = () =>
         },
         {
           name: "Aros sets con cuff",
-          price: "399,00",
+          price: "399",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77876801_1.Jpg",
           categoryId: "aros",
@@ -84,7 +84,7 @@ const getItems = () =>
         },
         {
           name: "Set de anillos ethnic",
-          price: "499,00",
+          price: "499",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77699601.Jpg",
           categoryId: "anillos",
@@ -92,7 +92,7 @@ const getItems = () =>
         },
         {
           name: "Sets anillos con piedra",
-          price: "399,00",
+          price: "399",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77902201_1.Jpg",
           categoryId: "anillos",
@@ -100,7 +100,7 @@ const getItems = () =>
         },
         {
           name: "Anillo chico con strass",
-          price: "149,00",
+          price: "149",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77288403.Jpg",
           categoryId: "anillos",
@@ -109,7 +109,7 @@ const getItems = () =>
         },
         {
           name: "Anillo ethnic",
-          price: "299,00",
+          price: "299",
           image: "https://ar.todomoda.com/media/catalog/product/cache/2/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/7/7/77715204.Jpg",
           categoryId: "anillos",
           id: "13",

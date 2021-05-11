@@ -31,6 +31,14 @@ export const CartProvider = ({ children }) => {
     return cart.reduce((acc, p) => acc + p.qty, 0);
   };
 
+  const getTotalPrice = () => {
+    return cart.reduce((acc, p) => acc + p.qty * p.price, 0);
+  };
+
+  const getSubtotal = (p) => {
+    return p.qty * p.price;
+  };
+
   const removeFromCart = (productId) => {
     const newCart = cart.filter((product) => product.id !== productId);
     setCart(newCart);
@@ -40,16 +48,27 @@ export const CartProvider = ({ children }) => {
     return cart.some((p) => p.id === productId);
   };
 
-  useEffect(() => {}, [cart]);
-
   //logica del context
   return (
-    <CartContext.Provider value={{ cart, addToCart, getSize, removeFromCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        getSize,
+        removeFromCart,
+        getTotalPrice,
+        getSubtotal,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
 /**
+ * 
+ * 
+  useEffect(() => {}, [cart]);
+
  *  //SIN SPREAD OEPRATOR
  *  [
  *    {

@@ -3,7 +3,8 @@ import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 
 const Cart = () => {
-  const { cart, removeFromCart } = useContext(CartContext);
+  const { cart, removeFromCart, getTotalPrice, getSubtotal } =
+    useContext(CartContext);
   return (
     <>
       <h1 className="titleOne">Mi compra</h1>
@@ -19,9 +20,9 @@ const Cart = () => {
             return (
               <tr>
                 <th>{p.name}</th>
-                <td>ARS${p.price}</td>
-                <td>{p.qty}</td>
-                <td>SUBTOTAL</td>
+                <td className="cartTableInfo">ARS${p.price}</td>
+                <td className="cartTableInfo">{p.qty}</td>
+                <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
               </tr>
             );
           })}
@@ -32,14 +33,15 @@ const Cart = () => {
             <p className="cart_nameRecibo">Resumen de compra</p>
             <div className="cart_totalForPay">
               <p className="cart_total">Total:</p>
-              <p>ARS$ XXX,XX</p>
+              <p>ARS${getTotalPrice()}</p>
             </div>
           </div>
           <div className="cart_final">
             <button className="cart_btnfinal">Finalizar compra</button>
             <button className="cart_btnDelete" onClick={() => removeFromCart()}>
-              Borrar
-            </button> {/* hace funcionar este btn */}
+              Eliminar Productos
+            </button>
+            {/* hacer funcionar este btn */}
           </div>
         </div>
       </div>

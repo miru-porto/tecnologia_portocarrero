@@ -10,7 +10,7 @@ const getItems = () =>
         {
           name: "Cadena corta con dije para compartir",
           madeBy: "Bijouterie",
-          price: "549,00",
+          price: "549",
           description:
             "Cadena corta con dije para compartir de estrella, planeta y luna",
           image:
@@ -23,7 +23,7 @@ const getItems = () =>
         {
           name: "Collar místico",
           madeBy: "Bijouterie",
-          price: "399,00",
+          price: "399",
           description:
             "Collar largo con dijes de ojo, mano y redondo con relieve",
           image:
@@ -36,7 +36,7 @@ const getItems = () =>
         {
           name: "Cadena corta con dije para compartir",
           madeBy: "Bijouterie",
-          price: "499,00",
+          price: "499",
           description:
             "Cadena corta con dije para compartir bff de palta corazono",
           image:
@@ -47,7 +47,7 @@ const getItems = () =>
         },
         {
           name: "Choker set",
-          price: "549,00",
+          price: "549",
           description:
             "Choker set con cadenas delicadas con detalles esmaltados, chapitas de metal y dije de vibora",
           image:
@@ -58,7 +58,7 @@ const getItems = () =>
         },
         {
           name: "Cadena corta para compartir",
-          price: "499,00",
+          price: "499",
           description: "Cadena corta con dije para compartir bff de unicornios",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77879601_1.Jpg",
@@ -68,7 +68,7 @@ const getItems = () =>
         },
         {
           name: "Aros argollas con corazon",
-          price: "249,00",
+          price: "249",
           description: "Aros argolla con dije de corazon esmaltado",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77878901_1.Jpg",
@@ -78,7 +78,7 @@ const getItems = () =>
         },
         {
           name: "Argollas gold",
-          price: "149,00",
+          price: "149",
           description: "Aros argolla doble plana 3 cm",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77356701_1.Jpg",
@@ -88,7 +88,7 @@ const getItems = () =>
         },
         {
           name: "Aros pasantes de perla",
-          price: "129,00",
+          price: "129",
           description: "Aros pasantes perlas 10 mm",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77292201.Jpg",
@@ -98,7 +98,7 @@ const getItems = () =>
         },
         {
           name: "Aros sets con cuff",
-          price: "399,00",
+          price: "399",
           description:
             "Aros set por 8 piezas: 2 argollas, 2 pasantes, 1 colgante corto y 3 cuff",
           image:
@@ -109,7 +109,7 @@ const getItems = () =>
         },
         {
           name: "Set de anillos ethnic",
-          price: "499,00",
+          price: "499",
           description: "Set de 8 anillos labrados, 2 con piedras",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77699601.Jpg",
@@ -119,7 +119,7 @@ const getItems = () =>
         },
         {
           name: "Sets anillos con piedra",
-          price: "399,00",
+          price: "399",
           description: "Sets Anillos por seis de piedra grandes",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77902201_1.Jpg",
@@ -129,7 +129,7 @@ const getItems = () =>
         },
         {
           name: "Anillo chico con strass",
-          price: "149,00",
+          price: "149",
           description: "Anillo fino con 1 piedra de strass grande engarzado",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77288403.Jpg",
@@ -139,7 +139,7 @@ const getItems = () =>
         },
         {
           name: "Anillo ethnic",
-          price: "299,00",
+          price: "299",
           description: "Anillo con piedra y relieve bajo",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77715204.Jpg",
