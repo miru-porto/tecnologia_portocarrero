@@ -47,17 +47,21 @@ export const CartProvider = ({ children }) => {
   const itemInCart = (productId) => {
     return cart.some((p) => p.id === productId);
   };
+  
+  const removeItems = () => setCart([]);
 
   //logica del context
   return (
     <CartContext.Provider
       value={{
         cart,
+        setCart,
         addToCart,
         getSize,
         removeFromCart,
         getTotalPrice,
         getSubtotal,
+        removeItems
       }}
     >
       {children}

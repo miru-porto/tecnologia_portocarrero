@@ -16,6 +16,31 @@
 .cartTable {
   width: 900px;
 }
+.cart_noProductsTitle{
+  text-transform: none;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+}
+
+.cart_noProductsSubtitle{
+  margin: 0 auto;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  background-color: transparent;
+}
+
+.cart_noProductsLink{
+  color: #000;
+}
+.cart_noProductsLink:hover{
+  color: #000;
+}
+
 .cartTableTitleName {
   text-transform: uppercase;
   font-size: 11px;
@@ -102,7 +127,7 @@ td {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 20px;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   color: #000000;
   font-size: 18px;
   font-weight: 700;
@@ -131,8 +156,9 @@ td {
   color: #000;
   padding: 0px 6px;
   background-color: lightgray;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 300;
   height: 35px;
   border: none;
+  text-transform: uppercase;
 }

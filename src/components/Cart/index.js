@@ -1,10 +1,18 @@
 import "./styles.css";
-import { useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 
 const Cart = () => {
-  const { cart, removeFromCart, getTotalPrice, getSubtotal } =
-    useContext(CartContext);
+  const {
+    cart,
+    setCart,
+    removeFromCart,
+    getTotalPrice,
+    getSubtotal,
+    removeItems,
+  } = useContext(CartContext);
+
   return (
     <>
       <h1 className="titleOne">Mi compra</h1>
@@ -16,16 +24,37 @@ const Cart = () => {
             <td className="cartTableTitleName">CANTIDAD</td>
             <td className="cartTableTitleName">SUBTOTAL</td>
           </tr>
-          {cart.map((p) => {
-            return (
-              <tr>
-                <th>{p.name}</th>
-                <td className="cartTableInfo">ARS${p.price}</td>
-                <td className="cartTableInfo">{p.qty}</td>
-                <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
-              </tr>
-            );
-          })}
+
+          {cart.length > 0 ? (
+            cart.map((p) => {
+              return (
+                <tr>
+                  <th>{p.name}</th>
+                  <td className="cartTableInfo">ARS${p.price}</td>
+                  <td className="cartTableInfo">{p.qty}</td>
+                  <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
+                </tr>
+              );
+            })
+          ) : (
+            <>
+              <div>
+                <h2 className="cart_noProductsTitle">
+                  El carrito de compras está vacío
+                </h2>
+                <p className="cart_noProductsSubtitle">
+                  Usted no tiene artículos en su carrito de compra.
+                </p>
+                <p className="cart_noProductsSubtitle">
+                  Click{" "}
+                  <NavLink to={"/"} className="cart_noProductsLink">
+                    aquí
+                  </NavLink>{" "}
+                  para continuar comprando
+                </p>
+              </div>
+            </>
+          )}
         </table>
 
         <div className="cart_recibo">
@@ -38,7 +67,7 @@ const Cart = () => {
           </div>
           <div className="cart_final">
             <button className="cart_btnfinal">Finalizar compra</button>
-            <button className="cart_btnDelete" onClick={() => removeFromCart()}>
+            <button className="cart_btnDelete" onClick={() => removeItems()}>
               Eliminar Productos
             </button>
             {/* hacer funcionar este btn */}

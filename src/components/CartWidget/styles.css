@@ -16,29 +16,72 @@
   bottom: 0;
   width: 410px;
   height: fit-content;
-  /*hacer que el height crezca
-  a medida que los productos van ocupando espacio*/
   border: 3px solid #000;
-  box-shadow: 4px 4px 0px 1px hotpink;
+  box-shadow: 4px 4px 0px 1px #fca9a9;
   background: #fff;
 }
+.infoContainerTable {
+  border-bottom: 2px solid lightgray;
+}
+.infoTable {
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 24px;
+  background-color: transparent;
+}
+
+.infoNoProducts{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 24px;
+  background-color: transparent;
+}
+
+
+/*
+
+.infoContainerBtnGoCart {
+  display: flex;
+  border-top: 2px solid lightgray;
+}
+.infoBtnGoCart {
+  margin: 20px auto;
+  color: white;
+  text-transform: uppercase;
+  background-color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 40px;
+  width: 150px;
+  height: 45px;
+  border: none;
+}
+
 .title {
   color: #000;
   display: flex;
   flex-direction: row;
   justify-content: start;
-  border: 1px solid blue;
-  margin: 10px 0 0 6px;
+  margin: 10px 6px;
 }
 .title p {
-  margin: 0 140px 0 6px;
-  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 24px;
+  background-color: transparent;
 }
+
 .infoFather {
   display: flex;
   flex-direction: column;
-  border: 1px solid yellow;
-  margin: 0 0 0 6px;
+  margin: 10px 6px;
 }
 
 .infoSon {
@@ -47,3 +90,5 @@
   justify-content: space-between;
   width: 258px;
 }
+
+*/
