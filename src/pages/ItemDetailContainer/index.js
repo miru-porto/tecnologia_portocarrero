@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "../../components/ItemDetail";
 import Loader from "../../components/Loader";
+import { getFirestore } from "../../firebase";
 
+/*
 const getItems = () =>
   new Promise((res, rej) => {
     setTimeout(() => {
       res([
         {
           name: "Cadena corta con dije para compartir",
-          madeBy: "Bijouterie",
           price: "549",
           description:
             "Cadena corta con dije para compartir de estrella, planeta y luna",
@@ -22,7 +23,6 @@ const getItems = () =>
 
         {
           name: "Collar místico",
-          madeBy: "Bijouterie",
           price: "399",
           description:
             "Collar largo con dijes de ojo, mano y redondo con relieve",
@@ -35,10 +35,9 @@ const getItems = () =>
 
         {
           name: "Cadena corta con dije para compartir",
-          madeBy: "Bijouterie",
           price: "499",
           description:
-            "Cadena corta con dije para compartir bff de palta corazono",
+            "Cadena corta con dije para compartir bff de palta corazón",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77879801_1.Jpg",
           categoryId: "collares",
@@ -49,7 +48,7 @@ const getItems = () =>
           name: "Choker set",
           price: "549",
           description:
-            "Choker set con cadenas delicadas con detalles esmaltados, chapitas de metal y dije de vibora",
+            "Choker set con cadenas delicadas con detalles esmaltados, chapitas de metal y dije de víbora",
           image:
             "https://ar.todomoda.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/7/7/77891201_1.Jpg",
           categoryId: "collares",
@@ -150,12 +149,52 @@ const getItems = () =>
       ]);
     }, 2000);
   });
+*/
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
   const { itemId } = useParams();
 
+  useEffect(() => {
+    setLoading(true);
+    const db = getFirestore();
+
+    const itemColletion = db.collection("items");
+    const itemById = itemColletion.doc(itemId);
+
+    itemById
+      .get()
+      .then((doc) => {
+        if (!doc.exists) {
+          console.log("El item no existe");
+          return;
+        }
+        console.log("El item si existe");
+        setProduct({ id: doc.id, ...doc.data() });
+      })
+      .catch((error) => {
+        console.log("error buscando el item", error);
+      })
+      .finally(() => setLoading(false));
+
+    /*
+    if (categoryId) {
+      const result = res.filter((res) => res.categoryId == categoryId);
+      console.log(result);
+      setProducts(result);
+
+      //filtro los productos x categoria
+    } else {
+      setProducts(res);
+      console.log(categoryId);
+    }
+    setLoading(false);    
+    */
+    // const res = await getItems();
+  }, [itemId]);
+
+  /*
   useEffect(async () => {
     const res = await getItems();
     const p = res.find((pr) => pr.id === itemId);
@@ -163,6 +202,7 @@ const ItemDetailContainer = () => {
     setProduct(p);
     setLoading(false);
   }, [itemId]);
+*/
 
   return <>{loading ? <Loader /> : <ItemDetail product={product} />}</>;
 };

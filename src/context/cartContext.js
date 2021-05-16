@@ -45,7 +45,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const itemInCart = (productId) => {
-    return cart.some((p) => p.id === productId);
+    return cart.some(p => p.id === productId);
   };
   
   const removeItems = () => setCart([]);

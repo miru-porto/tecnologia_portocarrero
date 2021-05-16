@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../../components/ItemList";
 import Loader from "../../components/Loader";
+import { getFirebase, getFirestore } from "../../firebase";
 
+/*
 const getItems = () =>
   new Promise((res, rej) => {
     setTimeout(() => {
@@ -118,17 +120,40 @@ const getItems = () =>
       ]);
     }, 2000);
   });
+*/
 
 const ItemListContainer = () => {
   const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const [filteredProducts, setFilteredProducts] = useState(products);
-
-  useEffect(async () => {
+  useEffect(() => {
     setLoading(true);
-    const res = await getItems();
+    const db = getFirestore();
+    const itemColletion = db.collection("items");
+    const filterQuery = categoryId
+      ? itemColletion.where("categoryId", "==", categoryId)
+      : itemColletion;
+
+    filterQuery
+      .get()
+      .then((querySnapshot) => {
+        if (querySnapshot.size === 0) {
+          console.log("No hay resultados");
+        }
+        console.log(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
+        setProducts(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
+      })
+      .catch((error) => {
+        console.log("error buscando items", error);
+      })
+      .finally(() => setLoading(false));
+
+    /*
     if (categoryId) {
       const result = res.filter((res) => res.categoryId == categoryId);
       console.log(result);
@@ -139,18 +164,12 @@ const ItemListContainer = () => {
       setProducts(res);
       console.log(categoryId);
     }
-    setLoading(false);
+    setLoading(false);    
+    */
+    // const res = await getItems();
   }, [categoryId]);
 
-  return (
-    <>
-      {loading ? (
-        <Loader/>
-      ) : (
-        <ItemList products={products} />
-      )}
-    </>
-  );
+  return <>{loading ? <Loader /> : <ItemList products={products} />}</>;
 };
 
 export default ItemListContainer;
