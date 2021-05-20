@@ -8,6 +8,14 @@
   background-color: transparent;
   text-transform: uppercase;
 }
+.checkout_titleSection {
+  width: 400px;
+  margin: 10 0 0 0;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 2px solid #ebebeb;
+  text-transform: uppercase;
+}
 .checkout_section {
   width: 400px;
   margin: 10 0 0 0;
