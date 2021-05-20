@@ -1,6 +1,6 @@
 import "./styles.css";
 import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 
 const Cart = () => {
@@ -66,50 +66,19 @@ const Cart = () => {
             </div>
           </div>
           <div className="cart_final">
-            <button className="cart_btnfinal">Finalizar compra</button>
+            <button className="cart_btnfinal">
+              <NavLink to={"/checkout"} className="cart_btnfinal">
+                Finalizar compra
+              </NavLink>{" "}
+            </button>
             <button className="cart_btnDelete" onClick={() => removeItems()}>
               Eliminar Productos
             </button>
-            {/* hacer funcionar este btn */}
           </div>
         </div>
       </div>
     </>
   );
 };
-
-/*
-<h1 className="cart_title">Mi compra</h1>
-      <div className="cart">
-        <div className="cart_components">
-          <div className="cart_subtitles">
-            <p>Producto</p>
-            <p>Precio</p>
-            <p>Cantidad</p>
-            <p>Subtotal</p>
-          </div>
-          <div className="cartProductList">
-            {cart.map((p) => {
-              return (
-                <div className="cartProductItem">
-                  <p className="cartProductName">{p.name}</p>
-                  <p>{p.price}</p>
-                  <p>{p.qty}</p>
-                  <p>SUBTOTAL</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="cart_recibo">
-          <div className="cart_info">
-            <p>Resumen de compra</p>
-            <p>Total: ARS$ XXX</p>
-          </div>
-          <button>Finalizar compra</button>
-        </div>
-      </div>
-
-*/
 
 export default Cart;

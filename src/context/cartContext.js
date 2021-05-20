@@ -68,25 +68,3 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-/**
- * 
- * 
-  useEffect(() => {}, [cart]);
-
- *  //SIN SPREAD OEPRATOR
- *  [
- *    {
- *      product: {name: '', price: 200 },
- *      qty: 5
- *    }
- *  ]
- *
- *  //CON SPREAD OPERATOR
- *  [
- *    {
- *       name: '',
- *       price: 200,
- *       qty: 5
- *    }
- *  ]
- */

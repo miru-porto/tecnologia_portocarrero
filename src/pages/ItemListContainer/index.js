@@ -153,20 +153,6 @@ const ItemListContainer = () => {
       })
       .finally(() => setLoading(false));
 
-    /*
-    if (categoryId) {
-      const result = res.filter((res) => res.categoryId == categoryId);
-      console.log(result);
-      setProducts(result);
-
-      //filtro los productos x categoria
-    } else {
-      setProducts(res);
-      console.log(categoryId);
-    }
-    setLoading(false);    
-    */
-    // const res = await getItems();
   }, [categoryId]);
 
   return <>{loading ? <Loader /> : <ItemList products={products} />}</>;

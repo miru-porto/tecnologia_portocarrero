@@ -17,16 +17,3 @@ const Item = ({ product }) => {
 };
 
 export default Item;
-/*
-{ids.map((id) => {
-              return (
-                <li>
-                  <Link
-                    to={`/item/${id}`}
-                  >
-                    {id}
-                  </Link>
-                </li>
-              );
-            })}
-*/

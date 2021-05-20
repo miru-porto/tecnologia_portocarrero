@@ -1,0 +1,36 @@
+.checkout_title {
+  text-align: center;
+  margin: 40px auto;
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 24px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+.checkout_section {
+  width: 400px;
+  margin: 10 0 0 0;
+  text-align: center;
+  border-bottom: 2px solid #ebebeb;
+}
+.checkout_total {
+  text-align: center;
+  margin: 40px auto;
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 24px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+/*
+.checkout_section th,
+.checkout_section td {
+  width: 800px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+}
+*/
+
