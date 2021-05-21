@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
+/*imports para poner fecha */
+import "firebase/firestore";
+import firebase from "firebase/app";
+
 import { useContext } from "react"; /* necesito pasarle el contexto */
 import { CartContext } from "../../context/cartContext";
 import { getFirestore } from "../../firebase";
 
 const Checkout = () => {
   /* const [product, setProduct] = useState({}); */
-  const [buyer, setBuyer] = useState({});
   const [orderId, setOrderId] = useState({});
   const [loading, setLoading] = useState(false);
   const {
@@ -25,20 +28,37 @@ const Checkout = () => {
   function handleChange(buyerId, evt) {
     const value = evt.target.value;
     const formData = { ...form, [buyerId]: value };
-    const { name, email, phone } = formData;
+    const { name, email, email2, phone } = formData;
     setForm(formData);
     console.log(name);
     console.log(email);
+    console.log(email2);
     console.log(phone);
   }
-
+  //crear una función que habilite el btn 'enviar' cuando todos los campos esten completados
+  const fieldEmpty = () => {
+    const { name, email, email2, phone } = form;
+    return [name, email, email2, phone].includes(""); //si da true el btn se desactiva
+  };
+  const handleSubmit = () => {
+    const { email, email2 } = form;
+    if (email == email2) {
+      console.log("el email introducido ha sido confirmado");
+      generateOrder();
+    } else {
+      console.log("el email no ha sido introducido correctamente");
+    }
+  };
+  // [] para arrray, {} para objetos
   const generateOrder = async () => {
     setLoading(true);
     const db = getFirestore();
     const orders = db.collection("orders");
+
     const newOrder = {
-      buyer,
+      buyer: { ...form },
       items: cart,
+      date: firebase.firestore.Timestamp.fromDate(new Date()),
       total: getTotalPrice(),
     };
     orders
@@ -72,7 +92,7 @@ const Checkout = () => {
             handleChange("email", evt);
           }}
         />
-        <p>Email:</p>
+        <p>Confirma tu email:</p>
         <input
           type="text"
           placeholder="Repetí tu Email"
@@ -88,6 +108,9 @@ const Checkout = () => {
             handleChange("phone", evt);
           }}
         />
+        <button onClick={(e) => handleSubmit(e)} disabled={fieldEmpty()}>
+          Enviar
+        </button>
       </div>
     </>
   );
