@@ -39,6 +39,7 @@ const Checkout = () => {
   const fieldEmpty = () => {
     const { name, email, email2, phone } = form;
     return [name, email, email2, phone].includes(""); //si da true el btn se desactiva
+  // return [email, email2].includes(email !== email2);
   };
   const handleSubmit = () => {
     const { email, email2 } = form;
