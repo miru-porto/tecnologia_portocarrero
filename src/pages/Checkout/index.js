@@ -7,6 +7,7 @@ import { getFirestore } from "../../firebase";
 const Checkout = () => {
   /* const [product, setProduct] = useState({}); */
   const [buyer, setBuyer] = useState({});
+  const [orderId, setOrderId] = useState({});
   const [loading, setLoading] = useState(false);
   const {
     cart /* aca tengo que pasarle los datos que voy a usar de por ejemplo los productos que voy a comrpar*/,
@@ -43,7 +44,7 @@ const Checkout = () => {
     orders
       .add(newOrder)
       .then(({ id }) => {
-        setOrderId(id);
+        setOrderId(id); //tengo que definirlo
       })
       .catch((err) => {
         console.log("error buscando la info del comprador", err);
