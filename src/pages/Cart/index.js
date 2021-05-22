@@ -1,7 +1,10 @@
 import "./styles.css";
 import { NavLink } from "react-router-dom";
+
+import Loader from "../../components/Loader"; //importando el loader
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
+
 
 const Cart = () => {
   const {
@@ -79,6 +82,8 @@ const Cart = () => {
       </div>
     </>
   );
+  
+  
 };
 
 export default Cart;
