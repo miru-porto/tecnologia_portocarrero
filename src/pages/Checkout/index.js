@@ -13,8 +13,8 @@ import { getFirestore } from "../../firebase";
 
 const Checkout = () => {
   const [orderId, setOrderId] = useState({});
-  const [loading, setLoading] = useState('');
-  const [showLink, setShowLink] = useState(false); 
+  const [loading, setLoading] = useState("");
+  const [showLink, setShowLink] = useState(false);
   const {
     cart /* aca tengo que pasarle los datos que voy a usar de por ejemplo los productos que voy a comrpar*/,
     removeItems,
@@ -28,7 +28,7 @@ const Checkout = () => {
     phone: "",
   });
 
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
 
   function handleChange(buyerId, evt) {
     const value = evt.target.value;
@@ -46,11 +46,11 @@ const Checkout = () => {
     if (email == email2) {
       console.log("el email introducido ha sido confirmado");
       generateOrder();
-      setStatus('Listo: tu pedido ha sido enviado con éxito' );
+      setStatus("Listo: tu pedido ha sido enviado con éxito");
       removeItems();
       setShowLink(true);
     } else {
-      setStatus('Error: los mails no coinciden')
+      setStatus("Error: los mails no coinciden");
     }
   };
   // [] para arrray, {} para objetos
@@ -78,25 +78,32 @@ const Checkout = () => {
       });
   };
 
-  if(loading){
-    return <Loader/>
-  }
-  
-  if(showLink){
-    //hace que el carrito se vacie
-    return <>
-      <Link to={'/'}>Volver a la Home</Link>
-      <p>{status}</p>
-    </>
+  if (loading) {
+    return <Loader />;
   }
 
+  if (showLink) {
+    //hace que el carrito se vacie
+    return (
+      <>
+        <div className="form_bienEnviado">
+          <Link to={"/"}>
+            <p className="form_link">Volvé a la Home</p>
+          </Link>
+          <p className="form_correcto">{status}</p>
+          <p>Id de compra: {orderId}</p>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
-      <form>
-        <label>
+      <form className="form">
+        <label className="form_label">
           Nombre:
           <input
+            className="form_input"
             type="text"
             placeholder="Nombre y Apellido"
             onChange={(evt) => {
@@ -104,9 +111,10 @@ const Checkout = () => {
             }}
           />
         </label>
-        <label>
+        <label className="form_label">
           Email:
           <input
+            className="form_input"
             type="text"
             placeholder="Email"
             onChange={(evt) => {
@@ -114,9 +122,10 @@ const Checkout = () => {
             }}
           />
         </label>
-        <label>
+        <label className="form_label">
           Confirma tu email:
           <input
+            className="form_input"
             type="text"
             placeholder="Repetí tu Email"
             onChange={(evt) => {
@@ -124,9 +133,10 @@ const Checkout = () => {
             }}
           />
         </label>
-        <label>
+        <label className="form_label">
           Teléfono:
           <input
+            className="form_input"
             type="text"
             placeholder="Teléfono"
             onChange={(evt) => {
@@ -134,9 +144,10 @@ const Checkout = () => {
             }}
           />
         </label>
-        {status && <p>{status}</p>} 
+        {status && <p className="form_status">{status}</p>}
       </form>
       <input
+        className="form_btn"
         type="submit"
         value="enviar"
         onClick={(e) => handleSubmit(e)}

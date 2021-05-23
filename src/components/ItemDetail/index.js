@@ -26,6 +26,7 @@ const ItemDetail = ({ product }) => {
           <h2 className="cardDetail_name">{product.name}</h2>
           <p className="cardDetail_price">ARS${product.price}</p>
           <p className="cardDetail_id">Nº Artículo: {product.id}</p>
+          <p className="cardDetail_description">{product.description}</p>
           {showButton ? (
             <button
               onClick={() => history.push("/cart")}
@@ -36,7 +37,6 @@ const ItemDetail = ({ product }) => {
           ) : (
             <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
           )}
-          <p>{product.description}</p>
         </div>
       </div>
     </>

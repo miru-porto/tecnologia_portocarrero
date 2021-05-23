@@ -1,95 +1,61 @@
-.checkout_datBuyer {
-  color: black;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
-  border-bottom: none;
-}
-.checkout {
+.form {
   display: flex;
-  flex-direction: row;
-  border: 1px solid red;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.checkout_part1 {
-  display: flex;
-  flex-flow: row wrap;
-}
-.checkout_btn{
-  background: #000;
-  background-color: black;
-  border: 1px solid black;
-  color: white;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 0;
-  height: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 0px 20px;
-  margin: 20px 20px 0;
-}
-.checkout_part1s {
-  display: flex;
-  border: 1px solid hotpink;
+.form_label {
   color: #6d6d6d;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 1px;
+  margin: 10px;
 }
-.checkout_part1sub {
+.form_input {
+  width: 200px;
+  height: 30px;
+  font-size: 12px;
+  margin: 10px;
+}
+.form_status {
+  color: red;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+.form_btn {
+  background: #000;
+  background-color: black;
+  text-transform: uppercase;
+  border: 1px solid black;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 0;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+  display: flex;
+  margin: auto;
+}
+.form_bienEnviado{
   display: flex;
   flex-direction: column;
-  margin: 30px 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
-.checkout_part1sub input {
-  height: 30px;
-  margin: 0;
-}
-
-.checkout_part2 {
-  background-color: transparent;
-  
-}
-.checkout_title {
-  text-align: left;
-  margin: 40px auto;
+.form_link{
   color: #000;
-  font-size: 30px;
-  font-weight: 600;
-  line-height: 24px;
-  background-color: transparent;
   text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: underline;
 }
-.checkout_titleSection {
-  font-size: 16px;
-  margin: 0px 10px 0px 0px;
-  /* border-bottom: 2px solid #ebebeb;*/
+.form_correcto{
+  color: green;
   text-transform: uppercase;
-  border: 1px solid red;
+  font-size: 12px;
+  font-weight: 500;
 }
-.checkout_section {
-  margin: 10 0 0 0;
-  text-align: center;
-  border-bottom: 2px solid #ebebeb;
-}
-.checkout_total {
-  text-align: center;
-  margin: 40px auto;
-  color: #000;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 24px;
-  background-color: transparent;
-  text-transform: uppercase;
-}
-/*
-.checkout_section th,
-.checkout_section td {
-  width: 800px;
-  padding: 10px;
-  text-align: center;
-  border: 1px solid black;
-}
-*/
