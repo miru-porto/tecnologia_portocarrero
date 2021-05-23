@@ -24,7 +24,7 @@ const Checkout = () => {
     phone: "",
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   function handleChange(buyerId, evt) {
     const value = evt.target.value;
@@ -41,14 +41,15 @@ const Checkout = () => {
     const { name, email, email2, phone } = form;
     return [name, email, email2, phone].includes(""); //si da true el btn se desactiva
   };
-  
+
   const handleSubmit = () => {
+    setError("");
     const { email, email2 } = form;
     if (email == email2) {
       console.log("el email introducido ha sido confirmado");
       generateOrder();
     } else {
-      setError('Los mails no coinciden')
+      setError("Los mails no coinciden");
     }
   };
   // [] para arrray, {} para objetos
@@ -66,7 +67,7 @@ const Checkout = () => {
     orders
       .add(newOrder)
       .then(({ id }) => {
-        setOrderId(id); 
+        setOrderId(id);
       })
       .catch((err) => {
         console.log("error buscando la info del comprador", err);
@@ -77,46 +78,62 @@ const Checkout = () => {
   };
   return (
     <>
-      <div>
-        <p>Nombre:</p>
-        <input
-          type="text"
-          placeholder="Nombre y Apellido"
-          onChange={(evt) => {
-            handleChange("name", evt);
-          }}
-        />
-        <p>Email:</p>
-        <input
-          type="text"
-          placeholder="Email"
-          onChange={(evt) => {
-            handleChange("email", evt);
-          }}
-        />
-        <p>Confirma tu email:</p>
-        <input
-          type="text"
-          placeholder="Repetí tu Email"
-          onChange={(evt) => {
-            handleChange("email2", evt);
-          }}
-        />
-        <p>Teléfono:</p>
-        <input
-          type="text"
-          placeholder="Teléfono"
-          onChange={(evt) => {
-            handleChange("phone", evt);
-          }}
-        />
+      <form>
+        <label>
+          Nombre:
+          <input
+            type="text"
+            placeholder="Nombre y Apellido"
+            onChange={(evt) => {
+              handleChange("name", evt);
+            }}
+          />
+        </label>
+        <label>
+          Email:
+          <input
+            type="text"
+            placeholder="Email"
+            onChange={(evt) => {
+              handleChange("email", evt);
+            }}
+          />
+        </label>
+        <label>
+          Confirma tu email:
+          <input
+            type="text"
+            placeholder="Repetí tu Email"
+            onChange={(evt) => {
+              handleChange("email2", evt);
+            }}
+          />
+        </label>
+        <label>
+          Teléfono:
+          <input
+            type="text"
+            placeholder="Teléfono"
+            onChange={(evt) => {
+              handleChange("phone", evt);
+            }}
+          />
+        </label>
         {error && <p>{error}</p>}
-        <button onClick={(e) => handleSubmit(e)} disabled={fieldEmpty()}>
-          Enviar
-        </button>
-      </div>
+      </form>
+      <input
+        type="submit"
+        value="enviar"
+        onClick={(e) => handleSubmit(e)}
+        disabled={fieldEmpty()}
+      />
     </>
   );
 };
 export default Checkout;
+/*
+<button onClick={(e) => handleSubmit(e)} disabled={fieldEmpty()}>
+          Enviar
+        </button>
 
+*/
