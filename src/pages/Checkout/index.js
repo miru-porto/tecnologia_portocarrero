@@ -1,19 +1,23 @@
 import { useState } from "react";
 import "./styles.css";
+/* importanddo link */
+import { Link } from "react-router-dom";
 /*imports para poner fecha */
 import "firebase/firestore";
 import firebase from "firebase/app";
 
+import Loader from "../../components/Loader";
 import { useContext } from "react"; /* necesito pasarle el contexto */
 import { CartContext } from "../../context/cartContext";
 import { getFirestore } from "../../firebase";
 
 const Checkout = () => {
   const [orderId, setOrderId] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState('');
+  const [showLink, setShowLink] = useState(false); 
   const {
     cart /* aca tengo que pasarle los datos que voy a usar de por ejemplo los productos que voy a comrpar*/,
-    getSubtotal,
+    removeItems,
     getTotalPrice,
   } = useContext(CartContext);
 
@@ -24,17 +28,12 @@ const Checkout = () => {
     phone: "",
   });
 
-  const [error, setError] = useState("");
+  const [status, setStatus] = useState('');
 
   function handleChange(buyerId, evt) {
     const value = evt.target.value;
     const formData = { ...form, [buyerId]: value };
-    const { name, email, email2, phone } = formData;
     setForm(formData);
-    console.log(name);
-    console.log(email);
-    console.log(email2);
-    console.log(phone);
   }
   //crear una función que habilite el btn 'enviar' cuando todos los campos esten completados
   const fieldEmpty = () => {
@@ -43,13 +42,15 @@ const Checkout = () => {
   };
 
   const handleSubmit = () => {
-    setError("");
     const { email, email2 } = form;
     if (email == email2) {
       console.log("el email introducido ha sido confirmado");
       generateOrder();
+      setStatus('Listo: tu pedido ha sido enviado con éxito' );
+      removeItems();
+      setShowLink(true);
     } else {
-      setError("Los mails no coinciden");
+      setStatus('Error: los mails no coinciden')
     }
   };
   // [] para arrray, {} para objetos
@@ -76,6 +77,20 @@ const Checkout = () => {
         setLoading(false);
       });
   };
+
+  if(loading){
+    return <Loader/>
+  }
+  
+  if(showLink){
+    //hace que el carrito se vacie
+    return <>
+      <Link to={'/'}>Volver a la Home</Link>
+      <p>{status}</p>
+    </>
+  }
+
+
   return (
     <>
       <form>
@@ -119,7 +134,7 @@ const Checkout = () => {
             }}
           />
         </label>
-        {error && <p>{error}</p>}
+        {status && <p>{status}</p>} 
       </form>
       <input
         type="submit"
@@ -131,9 +146,3 @@ const Checkout = () => {
   );
 };
 export default Checkout;
-/*
-<button onClick={(e) => handleSubmit(e)} disabled={fieldEmpty()}>
-          Enviar
-        </button>
-
-*/

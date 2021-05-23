@@ -1,3 +1,16 @@
+.category-image{
+    background-color: #e0c2de;
+    height: 30vh;
+    width: 80%;
+    display: flex;
+    margin: 20px auto;
+}
+.category-image p{
+    color: white;
+    margin: auto;
+    font-size: 56px;
+}
+
 .fondo{background-color: #ff8303;}
 
 .bordesProductos{border: 1px solid red;}
