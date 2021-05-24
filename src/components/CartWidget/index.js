@@ -7,6 +7,7 @@ const CartWidget = () => {
   const { cart } = useContext(CartContext);
 
   return (
+    <>
     <div className="cartWidgetContainer">
       <Link to={"/cart"}>
         <img className="img" src="../images/carro-de-la-compra.png" />
@@ -14,12 +15,12 @@ const CartWidget = () => {
       <div className="modal">
         
         {cart.length > 0 ? (
-          <>
-          <table className="infoContainerTable">
+        <>  
+        <table className="infoContainerTable">
           <td className="infoTable">Producto</td>
           <td className="infoTable">Cantidad</td>
         </table>
-          </>
+         
         {cart.map((p) => {
             return (
               <>
@@ -32,6 +33,7 @@ const CartWidget = () => {
               </>
             );
           })}
+          </>
         ) : (
           <>
             <p className="infoNoProducts">Aún no hay productos</p>
@@ -39,6 +41,7 @@ const CartWidget = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 
