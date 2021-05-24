@@ -28,9 +28,6 @@
   flex-direction: row;
   margin: 0 14px 0;
 }
-.header_dropdown{
-  color: #fefecc;
-}
 
 .header_categories{
   color: black;
@@ -45,6 +42,9 @@
 }
 .header_select{
   margin: auto;
+}
+.header_dropdown{
+  margin: 0 auto 12px;
 }
 .header_navbar {
   display: flex;

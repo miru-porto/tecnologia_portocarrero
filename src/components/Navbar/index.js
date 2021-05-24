@@ -30,7 +30,7 @@ const Navbarc = () => {
           <CartWidget />
           <p className="header_select">({getSize()})</p>
         </div>
-        <div>
+        <div className="header_dropdown">
           <Dropdown>
             <Dropdown.Toggle variant="light" id="dropdown-basic">
               Categorias
