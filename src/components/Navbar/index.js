@@ -26,19 +26,31 @@ const Navbarc = () => {
             <img src="../images/estrella.png" className="header_logo" />
             <img src="https://ar.todomoda.com/media/wysiwyg/logo_negro_new3.jpg" />
           </NavLink>
+
           <CartWidget />
           <p className="header_select">({getSize()})</p>
         </div>
         <div>
           <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              Dropdown Button
+            <Dropdown.Toggle variant="light" id="dropdown-basic">
+              Categorias
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              {categories.map((category) => {
+                return (
+                  <>
+                    <Dropdown.Item>
+                      <NavLink
+                        to={`/category/${category}`}
+                        className="header_categories"
+                      >
+                        {category}
+                      </NavLink>
+                    </Dropdown.Item>
+                  </>
+                );
+              })}
             </Dropdown.Menu>
           </Dropdown>
         </div>
