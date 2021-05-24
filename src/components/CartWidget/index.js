@@ -10,7 +10,7 @@ const CartWidget = () => {
     <>
     <div className="cartWidgetContainer">
       <Link to={"/cart"}>
-        <img className="img" src="../images/carro-de-la-compra.png" />
+        <img className="img" src="../images/agregar.png" />
       </Link>
       <div className="modal">
         
