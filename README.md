@@ -12,15 +12,10 @@ La navegación incluye:
 -   Una ruta que redirecciona al **checkout**
 
 ## Instrucciones de Instalación
-git clone https://github.com/Ada-22/Arlequin.git
-
-npm install
-
-npm start
-
-// Abrir navegador en http://localhost:3000/
-
-
+ 1. git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
+ 2. npm install
+ 3. npm start
+ 4. Abrir navegador en http://localhost:3000/
 
 
 ## Dependencias
