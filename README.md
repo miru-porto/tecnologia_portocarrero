@@ -20,5 +20,6 @@ La navegación incluye:
 
 ## Dependencias
 
- - [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner):  librería de spinners para tener una animación mientras el contenido carga.
+ - [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner): librería de spinners utilizado para tener una animación mientras el contenido carga.
 
+- [navbar-bootstrap](https://react-bootstrap.github.io/components/navbar/): librería de componentes utilizada para tener un navbar responsive
