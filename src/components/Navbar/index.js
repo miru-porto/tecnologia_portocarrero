@@ -12,6 +12,8 @@ import {
   Button,
 } from "react-bootstrap";
 
+const categories = ["anillos", "aros", "collares"];
+
 const Navbarc = () => {
   const { getSize } = useContext(CartContext);
 
@@ -27,6 +29,41 @@ const Navbarc = () => {
         <Nav className="mr-auto">
           <div className="header_carrito">
             <NavDropdown
+              title="Categorias"
+              id="basic-nav-dropdown"
+              className="header_dropdown"
+            >
+              {categories.map((category) => {
+                return (
+                  <>
+                    <NavDropdown.Item>
+                      <NavLink
+                        to={`/category/${category}`}
+                        className="header_categories"
+                      >
+                        {category}
+                      </NavLink>
+                    </NavDropdown.Item>
+                  </>
+                );
+              })}
+            </NavDropdown>
+
+            <div className="header_cartwidget">
+              <CartWidget />
+              <p className="header_select">({getSize()})</p>
+            </div>
+          </div>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+};
+
+export default Navbarc;
+
+/*
+<NavDropdown
               title="Categorias"
               id="basic-nav-dropdown"
               className="header_dropdown"
@@ -50,68 +87,4 @@ const Navbarc = () => {
                 </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
-
-            <div className="header_cartwidget">
-              <CartWidget />
-              <p className="header_select">({getSize()})</p>
-            </div>
-          </div>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  );
-};
-
-export default Navbarc;
-
-/*
-<img src="../images/carro-de-la-compra.png" className="header_car" />
-<header className="header">
-      <div className="header_navbar">
-        <div className="header_1">
-          <img src="../images/logo.png" className="header_logo" />
-          <h1>
-            <NavLink
-              to={"/"}
-              className="navlink"
-              activeClassName="active-navlink"
-            >
-              Tecnologia
-            </NavLink>
-          </h1>
-        </div>
-        <nav>
-          <ul className="header_nav">
-            <li>
-              <NavLink
-                exact
-                to={"/"}
-                className="navlink"
-                activeClassName="active-navlink"
-              >
-                Inicio
-              </NavLink>
-            </li>
-            {categories.map((c) => {
-              return (
-                <li>
-                  <NavLink
-                    to={`/category/${c}`}
-                    className="navlink"
-                    activeClassName="active-navlink"
-                  >
-                    {c}
-                  </NavLink>
-                </li>
-              );
-            })}
-
-            <li className="header_car">
-              {" "}
-              <CartWidget />{" "}
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-  ); */
+*/

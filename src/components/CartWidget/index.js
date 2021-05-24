@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/cartContext";
 
@@ -12,12 +12,15 @@ const CartWidget = () => {
         <img className="img" src="../images/carro-de-la-compra.png" />
       </Link>
       <div className="modal">
-        <table className="infoContainerTable">
+        
+        {cart.length > 0 ? (
+          <>
+          <table className="infoContainerTable">
           <td className="infoTable">Producto</td>
           <td className="infoTable">Cantidad</td>
         </table>
-        {cart.length > 0 ? (
-          cart.map((p) => {
+          </>
+        {cart.map((p) => {
             return (
               <>
                 <div className="infoFather">
@@ -28,7 +31,7 @@ const CartWidget = () => {
                 </div>
               </>
             );
-          })
+          })}
         ) : (
           <>
             <p className="infoNoProducts">Aún no hay productos</p>
