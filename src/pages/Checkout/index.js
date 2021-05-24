@@ -91,7 +91,7 @@ const Checkout = () => {
             <p className="form_link">Volvé a la Home</p>
           </Link>
           <p className="form_correcto">{status}</p>
-          <p>Tu orden de compra es: {orderId}</p>
+          <p className="form_orden">Tu orden de compra es: {orderId}</p>
         </div>
       </>
     );
@@ -144,7 +144,7 @@ const Checkout = () => {
             }}
           />
         </label>
-        {status && <p className="form_status">{status}</p>}
+        {status && <p className="form_error">{status}</p>}
       </form>
       <input
         className="form_btn"

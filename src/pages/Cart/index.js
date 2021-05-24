@@ -17,10 +17,10 @@ const Cart = () => {
 
   return (
     <>
+      <h1 className="titleOne">Mi compra</h1>
       <div className="cart">
         {cart.length > 0 ? (
           <>
-            <h1 className="titleOne">Mi compra</h1>
             <div>
               <table>
                 <tr className="cartTable">
