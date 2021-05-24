@@ -1,6 +1,6 @@
 import "./style.css";
 import { NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import CartWidget from "../CartWidget";
 import { CartContext } from "../../context/cartContext";
 import {
@@ -10,6 +10,7 @@ import {
   Form,
   FormControl,
   Button,
+  Dropdown,
 } from "react-bootstrap";
 
 const categories = ["anillos", "aros", "collares"];
@@ -18,7 +19,38 @@ const Navbarc = () => {
   const { getSize } = useContext(CartContext);
 
   return (
-    <Navbar className="header_color" expand="lg">
+    <>
+      <div className="header">
+        <div className="header_1">
+          <NavLink to={"/"} className="header_title1">
+            <img src="../images/estrella.png" className="header_logo" />
+            <img src="https://ar.todomoda.com/media/wysiwyg/logo_negro_new3.jpg" />
+          </NavLink>
+          <CartWidget />
+          <p className="header_select">({getSize()})</p>
+        </div>
+        <div>
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Dropdown Button
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Navbarc;
+
+/*
+ <Navbar className="header_color" expand="lg">
       <Navbar.Brand>
         <NavLink to={"/"} className="header_title1">
           <img src="../images/estrella.png" className="header_logo" />
@@ -57,34 +89,5 @@ const Navbarc = () => {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-  );
-};
-
-export default Navbarc;
-
-/*
-<NavDropdown
-              title="Categorias"
-              id="basic-nav-dropdown"
-              className="header_dropdown"
-            >
-              <NavDropdown.Item>
-                <NavLink
-                  to={"/category/collares"}
-                  className="header_categories"
-                >
-                  Collares
-                </NavLink>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <NavLink to={"/category/aros"} className="header_categories">
-                  Aros
-                </NavLink>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <NavLink to={"/category/anillos"} className="header_categories">
-                  Anillos
-                </NavLink>
-              </NavDropdown.Item>
-            </NavDropdown>
+  
 */

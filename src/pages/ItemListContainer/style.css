@@ -1,14 +1,15 @@
 .category-image{
     background-color: #e0c2de;
     height: 30vh;
-    width: 80%;
+    width: 92%;
     display: flex;
-    margin: 20px auto;
+    margin: 0 auto 20px;
 }
 .category-image p{
     color: white;
     margin: auto;
     font-size: 56px;
+    font-weight: 600;
 }
 
 .fondo{background-color: #ff8303;}
