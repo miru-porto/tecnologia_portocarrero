@@ -44,6 +44,29 @@ const Cart = () => {
                 })}
               </table>
             </div>
+            
+            <div className="cart_recibo">
+              <div className="cart_info">
+                <p className="cart_nameRecibo">Resumen de compra</p>
+                <div className="cart_totalForPay">
+                  <p className="cart_total">Total:</p>
+                  <p>ARS$ {getTotalPrice()}</p>
+                </div>
+              </div>
+              <div className="cart_final">
+                <button className="cart_btnfinal">
+                  <NavLink to={"/checkout"} className="cart_btnfinal">
+                    Finalizar compra
+                  </NavLink>{" "}
+                </button>
+                <button
+                  className="cart_btnDelete"
+                  onClick={() => removeItems()}
+                >
+                  Eliminar Productos
+                </button>
+              </div>
+            </div>
           </>
         ) : (
           <>
@@ -64,26 +87,6 @@ const Cart = () => {
             </div>
           </>
         )}
-
-        <div className="cart_recibo">
-          <div className="cart_info">
-            <p className="cart_nameRecibo">Resumen de compra</p>
-            <div className="cart_totalForPay">
-              <p className="cart_total">Total:</p>
-              <p>ARS${getTotalPrice()}</p>
-            </div>
-          </div>
-          <div className="cart_final">
-            <button className="cart_btnfinal">
-              <NavLink to={"/checkout"} className="cart_btnfinal">
-                Finalizar compra
-              </NavLink>{" "}
-            </button>
-            <button className="cart_btnDelete" onClick={() => removeItems()}>
-              Eliminar Productos
-            </button>
-          </div>
-        </div>
       </div>
     </>
   );

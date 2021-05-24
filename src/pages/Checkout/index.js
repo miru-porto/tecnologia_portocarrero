@@ -149,7 +149,7 @@ const Checkout = () => {
       <input
         className="form_btn"
         type="submit"
-        value="enviar"
+        value="realizar compra"
         onClick={(e) => handleSubmit(e)}
         disabled={fieldEmpty()}
       />

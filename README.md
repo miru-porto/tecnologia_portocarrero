@@ -6,8 +6,8 @@ Ecommerce desarrollado en React como parte del proyecto correspondiente al curso
 La navegación incluye:
 
 -   Home con productos
--   Una ruta que redirecciona al **producto con detalle**
 -   Una ruta que redirecciona a las **productos filtrados por categoría**
+-   Una ruta que redirecciona al **producto con detalle**
 -   Una ruta que redirecciona al **carrito**
 -   Una ruta que redirecciona al **checkout**
 
