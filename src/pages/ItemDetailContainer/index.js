@@ -46,9 +46,7 @@ const ItemDetailContainer = () => {
         <div className="detailContainer_mensaje">
           <div>
             <p className="detailContainer_parrafo">
-              Para buscar lo que querés, podés usar el buscador del sitio
-              <br></br>
-              o navegar nuestro menú principal.
+              Para buscar lo que querés, podés navegar a nuestro menú principal.
             </p>
           </div>
           <div className="detailContainer_btn">

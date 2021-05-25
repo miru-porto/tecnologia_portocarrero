@@ -8,6 +8,8 @@
 }
 .cartWidgetContainer {
   position: relative;
+  top: 0;
+  margin: 10px auto;
 }
 .cartWidgetContainer:hover .modal {
   display: block;

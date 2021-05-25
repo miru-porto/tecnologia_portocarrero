@@ -11,6 +11,8 @@ La navegación incluye:
 -   Una ruta que redirecciona al **carrito**
 -   Una ruta que redirecciona al **checkout**
 
+El diseño está basado en Todomoda
+
 ## Instrucciones de Instalación
  1. git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
  2. npm install
