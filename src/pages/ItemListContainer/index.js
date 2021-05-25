@@ -23,6 +23,7 @@ const ItemListContainer = () => {
       .then((querySnapshot) => {
         if (querySnapshot.size === 0) {
           console.log("No hay resultados");
+          //tengo que decir que no existe categoria
         }
         console.log(
           querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
@@ -37,12 +38,6 @@ const ItemListContainer = () => {
       .finally(() => setLoading(false));
   }, [categoryId]);
 
-  /* || ([se llama 'or'] => si el primer miembro es true, se ejecuta el primero miembro y
-se descarta el segundo. Pero si el primero es falso
-y el otro tmb es falso. ninguno se ejecuta)
-EJEMPLO: {true || <p>adios</p>} => se ejecuta el primero porque es true y el segundo se descarta
-*/
-
   return (
     <>
       <div className="category-image">
@@ -54,3 +49,10 @@ EJEMPLO: {true || <p>adios</p>} => se ejecuta el primero porque es true y el seg
 };
 
 export default ItemListContainer;
+
+
+/* || ([se llama 'or'] => si el primer miembro es true, se ejecuta el primero miembro y
+se descarta el segundo. Pero si el primero es falso
+y el otro tmb es falso. ninguno se ejecuta)
+EJEMPLO: {true || <p>adios</p>} => se ejecuta el primero porque es true y el segundo se descarta
+*/
