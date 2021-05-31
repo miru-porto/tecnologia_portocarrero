@@ -31,6 +31,8 @@ gif con el recorrido del ecommerce
 - [dropdown-bootstrap](https://react-bootstrap.netlify.app/components/dropdowns/#dropdowns): librería de componentes utilizada para tener un dropdown
 
 
-    1.  git clone  [https://github.com/Miranda-777/tecnologia_portocarrero.git](https://github.com/Miranda-777/tecnologia_portocarrero.git)
-    2. npm install
-    3. npm start
+```
+git clone  [https://github.com/Miranda-777/tecnologia_portocarrero.git](https://github.com/Miranda-777/tecnologia_portocarrero.git)
+npm install
+npm start
+```
