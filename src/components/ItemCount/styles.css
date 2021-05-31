@@ -1,53 +1,49 @@
-.carNombre{
-    text-align: center;
+.carHorizonal {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.carText {
+  font-weight: 600;
+  font-size: 15px;
+  margin: auto 0;
+}
+.carCount {
+  border: 1px solid lightgrey;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: 0 0 0 10px;
+  font-size: 14px;
+}
+.carContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.carHorizonal{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-}
-.carText{
-    font-weight: 600;
-    font-size: 15px;
-    margin: auto 0;
-}
-.carCount{
-    border: 1px solid lightgrey;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    margin: 0 0 0 10px;
-    font-size: 14px;
-}
-.carContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.carBtns {
+  background-color: transparent;
+  border: none;
+  width: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 12px;
 }
 
-.carBtns{
-    background-color: transparent;
-    border: none;
-    width: 16px;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 12px;
-}
-
-.carBtnAgregar{
-    display: flex;
-    margin: 0 auto;
-    line-height: 38px;
-    color: #000;
-    background: #fff;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0px 1px #000;
-    letter-spacing: 0;
-    font-size: 16px;
-    padding: 5px 20px;
-    font-weight: bold;
-    text-transform: uppercase;
+.carBtnAgregar {
+  display: flex;
+  margin: 0 auto;
+  line-height: 38px;
+  color: #000;
+  background: #fff;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px 1px #000;
+  letter-spacing: 0;
+  font-size: 16px;
+  padding: 5px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
