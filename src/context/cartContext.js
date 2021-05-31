@@ -22,7 +22,6 @@ export const CartProvider = ({ children }) => {
 
       setCart(newCart);
     } else {
-      //el producto no esta
       setCart([...cart, { ...product, qty }]);
     }
   };
@@ -50,7 +49,6 @@ export const CartProvider = ({ children }) => {
 
   const removeItems = () => setCart([]);
 
-  //logica del context
   return (
     <CartContext.Provider
       value={{
