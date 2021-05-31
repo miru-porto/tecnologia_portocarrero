@@ -32,7 +32,7 @@ gif con el recorrido del ecommerce
 
 
 ```
-git clone  [https://github.com/Miranda-777/tecnologia_portocarrero.git](https://github.com/Miranda-777/tecnologia_portocarrero.git)
+git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
 npm install
 npm start
 ```
