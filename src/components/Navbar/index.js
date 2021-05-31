@@ -3,15 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import CartWidget from "../CartWidget";
 import { CartContext } from "../../context/cartContext";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Dropdown,
-} from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
 const categories = ["anillos", "aros", "collares"];
 
