@@ -21,6 +21,8 @@ Ecommerce desarrollado en React como parte del proyecto correspondiente al curso
  3. npm start
  4. Abrir navegador en http://localhost:3000/
 
+## Walkthrough
+gif con el recorrido del ecommerce
 
 ## Dependencias
 
