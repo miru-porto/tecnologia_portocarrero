@@ -1,4 +1,4 @@
-# Bijouterie
+# ✨Bijouterie
 
 Ecommerce desarrollado en React como parte del proyecto correspondiente al curso de ReactJs en CoderHouse, que se encarga de la comercialización de accesorios y adornos.
 
