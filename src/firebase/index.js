@@ -12,9 +12,3 @@ const app = firebase.initializeApp({
 export const getFirebase = () => app;
 
 export const getFirestore = () => firebase.firestore(app);
-/*
-process.env.REACT_APP_NOT_SECRET_CODE
-ocultar keys
-apiKey: "AIzaSyAuwDqlH1QbyDri3MDtvVkkkMNrKdWkyJY",
-appId: "1:981025051227:web:1a244db9909946441b657e",
-*/
