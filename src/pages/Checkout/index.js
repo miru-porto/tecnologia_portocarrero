@@ -1,13 +1,10 @@
 import { useState } from "react";
 import "./styles.css";
-/* importanddo link */
 import { Link } from "react-router-dom";
-/*imports para poner fecha */
 import "firebase/firestore";
 import firebase from "firebase/app";
-
 import Loader from "../../components/Loader";
-import { useContext } from "react"; /* necesito pasarle el contexto */
+import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 import { getFirestore } from "../../firebase";
 
@@ -15,11 +12,7 @@ const Checkout = () => {
   const [orderId, setOrderId] = useState({});
   const [loading, setLoading] = useState("");
   const [showLink, setShowLink] = useState(false);
-  const {
-    cart /* aca tengo que pasarle los datos que voy a usar de por ejemplo los productos que voy a comrpar*/,
-    removeItems,
-    getTotalPrice,
-  } = useContext(CartContext);
+  const { cart, removeItems, getTotalPrice } = useContext(CartContext);
 
   const [form, setForm] = useState({
     name: "",
@@ -35,10 +28,10 @@ const Checkout = () => {
     const formData = { ...form, [buyerId]: value };
     setForm(formData);
   }
-  //crear una función que habilite el btn 'enviar' cuando todos los campos esten completados
+
   const fieldEmpty = () => {
     const { name, email, email2, phone } = form;
-    return [name, email, email2, phone].includes(""); //si da true el btn se desactiva
+    return [name, email, email2, phone].includes("");
   };
 
   const handleSubmit = () => {
@@ -53,7 +46,7 @@ const Checkout = () => {
       setStatus("Error: los mails no coinciden");
     }
   };
-  // [] para arrray, {} para objetos
+
   const generateOrder = async () => {
     setLoading(true);
     const db = getFirestore();
@@ -83,7 +76,6 @@ const Checkout = () => {
   }
 
   if (showLink) {
-    //hace que el carrito se vacie
     return (
       <>
         <div className="form_bienEnviado">
