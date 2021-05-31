@@ -2,6 +2,7 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../../components/ItemList";
+import Error404 from "../../components/Error404";
 import Loader from "../../components/Loader";
 import { getFirestore } from "../../firebase";
 
@@ -9,9 +10,11 @@ const ItemListContainer = () => {
   const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     setLoading(true);
+    setNotFound(false);
     const db = getFirestore();
     const itemColletion = db.collection("items");
     const filterQuery = categoryId
@@ -23,7 +26,7 @@ const ItemListContainer = () => {
       .then((querySnapshot) => {
         if (querySnapshot.size === 0) {
           console.log("No hay resultados");
-          //tengo que decir que no existe categoria
+          setNotFound(true);
         }
         console.log(
           querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
@@ -38,6 +41,14 @@ const ItemListContainer = () => {
       .finally(() => setLoading(false));
   }, [categoryId]);
 
+  if (notFound) {
+    return (
+      <>
+        <Error404 />
+      </>
+    );
+  }
+
   return (
     <>
       <div className="category-image">
@@ -49,10 +60,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
-
-/* || ([se llama 'or'] => si el primer miembro es true, se ejecuta el primero miembro y
-se descarta el segundo. Pero si el primero es falso
-y el otro tmb es falso. ninguno se ejecuta)
-EJEMPLO: {true || <p>adios</p>} => se ejecuta el primero porque es true y el segundo se descarta
-*/

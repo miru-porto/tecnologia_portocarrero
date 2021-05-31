@@ -1,6 +1,6 @@
 import Item from "../Item";
-import {Container} from 'react-bootstrap';
-import './styles.css';
+import { Container } from "react-bootstrap";
+import "./styles.css";
 
 const ItemList = ({ products }) => {
   return (
