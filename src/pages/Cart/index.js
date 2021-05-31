@@ -44,7 +44,7 @@ const Cart = () => {
                 })}
               </table>
             </div>
-            
+
             <div className="cart_recibo">
               <div className="cart_info">
                 <p className="cart_nameRecibo">Resumen de compra</p>
