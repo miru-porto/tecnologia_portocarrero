@@ -18,7 +18,7 @@ Abrir navegador en http://localhost:3000/
 |Route| Descripción  |
 |--|--|
 | / | Home y listado de todos los productos.|
-| /item/:id  |Detalles del producto según el id del item. En caso de que el produtco no exista en la base de datos, se avisa al usuario al respecto.| 
+| /item/:itemId  |Detalles del producto según el id del item. En caso de que el produtco no exista en la base de datos, se avisa al usuario al respecto.| 
 |/category/:categoryId|Listado de productos según categoría.|
 |/cart|Carrito en el que se muestra un resumen del pedido del cliente.|
 |/checkout|Despacho del cliente, en el que se registra su información en la base de datos.|
