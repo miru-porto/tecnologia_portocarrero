@@ -11,16 +11,7 @@ Ecommerce desarrollado en React como parte del proyecto correspondiente al curso
 |/cart|Carrito en el que se muestra un resumen del pedido del cliente.|
 |/checkout|Despacho del cliente, en el que se registra su información en la base de datos.|
 
-## Navegación
-La navegación incluye:
-
--   Home con productos
--   Una ruta que redirecciona a las **productos filtrados por categoría**
--   Una ruta que redirecciona al **producto con detalle**
--   Una ruta que redirecciona al **carrito**
--   Una ruta que redirecciona al **checkout**
-
-## Detalles
+## Aclaraciones
 
 -   El diseño está basado en **Todomoda**
 
