@@ -3,10 +3,12 @@
 Ecommerce desarrollado en React como parte del proyecto correspondiente al curso de ReactJs en CoderHouse, que se encarga de la comercialización de accesorios y adornos.
 
 ## Instrucciones de Instalación
- 1. git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
- 2. npm install
- 3. npm start
- 4. Abrir navegador en http://localhost:3000/
+```
+git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
+npm install
+npm start
+```
+Abrir navegador en http://localhost:3000/
 
 ## Aclaraciones
 
@@ -30,9 +32,3 @@ gif con el recorrido del ecommerce
 
 - [dropdown-bootstrap](https://react-bootstrap.netlify.app/components/dropdowns/#dropdowns): librería de componentes utilizada para tener un dropdown
 
-
-```
-git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
-npm install
-npm start
-```
