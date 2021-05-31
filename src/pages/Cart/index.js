@@ -1,19 +1,11 @@
 import "./styles.css";
 import { NavLink } from "react-router-dom";
-
-import Loader from "../../components/Loader"; //importando el loader
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 
 const Cart = () => {
-  const {
-    cart,
-    setCart,
-    removeFromCart,
-    getTotalPrice,
-    getSubtotal,
-    removeItems,
-  } = useContext(CartContext);
+  const { cart, removeFromCart, getTotalPrice, getSubtotal, removeItems } =
+    useContext(CartContext);
 
   return (
     <>
@@ -34,11 +26,18 @@ const Cart = () => {
                   return (
                     <>
                       <tr>
-                        <th className="cartTableInfoName">{p.name}</th>
+                        <th>{p.name}</th>
                         <td className="cartTableInfo">ARS${p.price}</td>
                         <td className="cartTableInfo">{p.qty}</td>
                         <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
-                        <td><button  className="cartTableBtn" onClick={()=>removeFromCart(p.id)}>X</button></td>
+                        <td>
+                          <button
+                            className="cartTableBtn"
+                            onClick={() => removeFromCart(p.id)}
+                          >
+                            X
+                          </button>
+                        </td>
                       </tr>
                     </>
                   );
@@ -50,7 +49,7 @@ const Cart = () => {
               <div className="cart_info">
                 <p className="cart_nameRecibo">Resumen de compra</p>
                 <div className="cart_totalForPay">
-                  <p className="cart_total">Total:</p>
+                  <p>Total:</p>
                   <p>ARS$ {getTotalPrice()}</p>
                 </div>
               </div>

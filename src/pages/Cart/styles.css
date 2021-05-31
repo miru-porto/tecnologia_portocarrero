@@ -73,44 +73,10 @@ td {
   border-radius: 50%;
   border: none;
   background-color: #000;
-  color:#ebebeb;
+  color: #ebebeb;
   font-size: 10px;
 }
-/*las clases de abajo son del ejercicio anterior*/
-.cart_title {
-  margin: 0 0 0 50px;
-}
 
-.cart_components {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 40px;
-  border: 1px solid fuchsia;
-  width: 900px;
-}
-
-.cart_subtitles {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border: 1px solid yellow;
-}
-
-.cartProductList {
-  display: flex;
-  flex-direction: column;
-}
-.cartProductItem {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border: 1px solid blue;
-}
-.cartProductName {
-  border: 1px solid brown;
-  width: 100px;
-}
-/*lo que importa es lo abajo*/
 .cart_recibo {
   background-color: #fcf7ef;
   border: 3px solid #000;
