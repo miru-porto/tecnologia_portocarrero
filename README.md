@@ -2,7 +2,7 @@
 
 Ecommerce desarrollado en React como parte del proyecto correspondiente al curso de ReactJs en CoderHouse, que se encarga de la comercialización de accesorios y adornos.
 
-## Aclaraciones
+## Navegación
 La navegación incluye:
 
 -   Home con productos
@@ -11,7 +11,9 @@ La navegación incluye:
 -   Una ruta que redirecciona al **carrito**
 -   Una ruta que redirecciona al **checkout**
 
-El diseño está basado en Todomoda
+## Detalles
+
+-   El diseño está basado en **Todomoda**
 
 ## Instrucciones de Instalación
  1. git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
