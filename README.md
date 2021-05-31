@@ -8,12 +8,6 @@ Ecommerce desarrollado en React como parte del proyecto correspondiente al curso
  3. npm start
  4. Abrir navegador en http://localhost:3000/
 
-    1.  git clone  [https://github.com/Miranda-777/tecnologia_portocarrero.git](https://github.com/Miranda-777/tecnologia_portocarrero.git)
-    2. npm install
-    3. npm start
-
-
-
 ## Aclaraciones
 
 -   El diseño está basado en **Todomoda**
@@ -35,3 +29,8 @@ gif con el recorrido del ecommerce
  - [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner): librería de spinners utilizado para tener una animación mientras el contenido carga.
 
 - [dropdown-bootstrap](https://react-bootstrap.netlify.app/components/dropdowns/#dropdowns): librería de componentes utilizada para tener un dropdown
+
+
+    1.  git clone  [https://github.com/Miranda-777/tecnologia_portocarrero.git](https://github.com/Miranda-777/tecnologia_portocarrero.git)
+    2. npm install
+    3. npm start
