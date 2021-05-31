@@ -12,7 +12,7 @@ Abrir navegador en http://localhost:3000/
 
 ## Aclaraciones
 
--   El diseño está basado en **Todomoda**
+-   El diseño está basado en **Todomoda**.
 
 ## Routes
 |Route| Descripción  |
@@ -30,5 +30,5 @@ gif con el recorrido del ecommerce
 
  - [react-loader-spinner](https://www.npmjs.com/package/react-loader-spinner): librería de spinners utilizado para tener una animación mientras el contenido carga.
 
-- [dropdown-bootstrap](https://react-bootstrap.netlify.app/components/dropdowns/#dropdowns): librería de componentes utilizada para tener un dropdown
+- [dropdown-bootstrap](https://react-bootstrap.netlify.app/components/dropdowns/#dropdowns): librería de componentes utilizada para tener un dropdown.
 
