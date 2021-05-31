@@ -138,6 +138,7 @@ const Checkout = () => {
         </label>
         {status && <p className="form_error">{status}</p>}
       </form>
+
       <input
         className="form_btn"
         type="submit"
@@ -148,4 +149,57 @@ const Checkout = () => {
     </>
   );
 };
+
 export default Checkout;
+
+/*
+<form className="form">
+        <label className="form_label">
+          Nombre:
+          <input
+            className="form_input"
+            type="text"
+            placeholder="Nombre y Apellido"
+            onChange={(evt) => {
+              handleChange("name", evt);
+            }}
+          />
+        </label>
+        <label className="form_label">
+          Email:
+          <input
+            className="form_input"
+            type="text"
+            placeholder="Email"
+            onChange={(evt) => {
+              handleChange("email", evt);
+            }}
+          />
+        </label>
+        <label className="form_label">
+          Confirma tu email:
+          <input
+            className="form_input"
+            type="text"
+            placeholder="Repetí tu Email"
+            onChange={(evt) => {
+              handleChange("email2", evt);
+            }}
+          />
+        </label>
+        <label className="form_label">
+          Teléfono:
+          <input
+            className="form_input"
+            type="text"
+            placeholder="Teléfono"
+            onChange={(evt) => {
+              handleChange("phone", evt);
+            }}
+          />
+        </label>
+        {status && <p className="form_error">{status}</p>}
+      </form>
+
+
+ */
