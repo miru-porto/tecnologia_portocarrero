@@ -9,7 +9,7 @@ const ItemDetail = ({ product }) => {
   const [showButton, setShowButton] = useState(false);
   const history = useHistory();
   const { addToCart } = useContext(CartContext);
-
+     
   const onAdd = (count) => {
     console.log(count);
     setShowButton(true);
