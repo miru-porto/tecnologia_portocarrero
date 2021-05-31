@@ -8,6 +8,12 @@ Ecommerce desarrollado en React como parte del proyecto correspondiente al curso
  3. npm start
  4. Abrir navegador en http://localhost:3000/
 
+    1.  git clone  [https://github.com/Miranda-777/tecnologia_portocarrero.git](https://github.com/Miranda-777/tecnologia_portocarrero.git)
+    2. npm install
+    3. npm start
+
+
+
 ## Aclaraciones
 
 -   El diseño está basado en **Todomoda**
