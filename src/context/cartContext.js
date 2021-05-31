@@ -45,9 +45,9 @@ export const CartProvider = ({ children }) => {
   };
 
   const itemInCart = (productId) => {
-    return cart.some(p => p.id === productId);
+    return cart.some((p) => p.id === productId);
   };
-  
+
   const removeItems = () => setCart([]);
 
   //logica del context
@@ -61,7 +61,7 @@ export const CartProvider = ({ children }) => {
         removeFromCart,
         getTotalPrice,
         getSubtotal,
-        removeItems
+        removeItems,
       }}
     >
       {children}

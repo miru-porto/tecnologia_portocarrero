@@ -38,6 +38,7 @@ const Cart = () => {
                         <td className="cartTableInfo">ARS${p.price}</td>
                         <td className="cartTableInfo">{p.qty}</td>
                         <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
+                        <td><button  className="cartTableBtn" onClick={()=>removeFromCart(p.id)}>X</button></td>
                       </tr>
                     </>
                   );
