@@ -25,7 +25,7 @@ const Cart = () => {
                 {cart.map((p) => {
                   return (
                     <>
-                      <tr>
+                      <tr key={p.id}>
                         <th>{p.name}</th>
                         <td className="cartTableInfo">ARS${p.price}</td>
                         <td className="cartTableInfo">{p.qty}</td>

@@ -15,8 +15,12 @@ export const CartProvider = ({ children }) => {
 
       newCart.forEach((p) => {
         if (p.id === product.id) {
+          console.log(p.stock);
+          if (p.qty + qty <= p.stock) {
+            p.qty += qty;
+            console.log("los productos no superaron a los del stock");
+          }
           console.log(p);
-          p.qty = p.qty + qty;
         }
       });
 
