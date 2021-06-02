@@ -26,7 +26,7 @@ const Cart = () => {
                   return (
                     <>
                       <tr key={p.id}>
-                        <th>{p.name}</th>
+                        <th><NavLink to={`${}`p.id}>{p.name}</NavLink></th>
                         <td className="cartTableInfo">ARS${p.price}</td>
                         <td className="cartTableInfo">{p.qty}</td>
                         <td className="cartTableInfo">ARS${getSubtotal(p)}</td>

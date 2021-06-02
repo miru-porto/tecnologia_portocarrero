@@ -21,10 +21,10 @@ export const CartProvider = ({ children }) => {
             console.log("los productos no superaron a los del stock");
           } else {
             p.qty = parseInt(product.stock);
-            setMessage("no podes comprar mas productos de este tipo");
+            setMessage("¡no podés comprar más este producto!");
             console.log(p);
           }
-        } 
+        }
       });
 
       setCart(newCart);
