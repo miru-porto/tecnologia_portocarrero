@@ -27,7 +27,7 @@ const ItemDetail = ({ product }) => {
           <p className="cardDetail_price">ARS${product.price}</p>
           <p className="cardDetail_id">Nº Artículo: {product.id}</p>
           <p className="cardDetail_description">{product.description}</p>
-          <p className="cardDetail_message">{message}</p>
+          {message && <p className="cardDetail_message">{message}</p>}
 
           {showButton ? (
             <button

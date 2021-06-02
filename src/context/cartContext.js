@@ -21,7 +21,8 @@ export const CartProvider = ({ children }) => {
             console.log("los productos no superaron a los del stock");
           } else {
             p.qty = parseInt(product.stock);
-            setMessage("¡no podés comprar más este producto!");
+            setMessage(`¡Llevás como máximo ${product.stock} de este producto!`);
+            //llevas como máximo product.stock 
             console.log(p);
           }
         }
