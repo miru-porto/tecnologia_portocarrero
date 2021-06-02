@@ -65,6 +65,10 @@ td {
   font-weight: 700;
   line-height: 24px;
   background-color: transparent;
+  color: #000000;
+}
+.cartTableInfo:hover{
+  color: #000000;
 }
 .cartTableBtn {
   display: block;
