@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./styles.css";
 import { Link } from "react-router-dom";
 import "firebase/firestore";
 import firebase from "firebase/app";
 import Loader from "../../components/Loader";
-import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 import { getFirestore } from "../../firebase";
 
@@ -12,7 +11,8 @@ const Checkout = () => {
   const [orderId, setOrderId] = useState({});
   const [loading, setLoading] = useState("");
   const [showLink, setShowLink] = useState(false);
-  const { cart, removeItems, getTotalPrice } = useContext(CartContext);
+  const { cart, removeItems, getTotalPrice, getSubtotal } =
+    useContext(CartContext);
 
   const [form, setForm] = useState({
     name: "",
@@ -40,10 +40,10 @@ const Checkout = () => {
       console.log("el email introducido ha sido confirmado");
       generateOrder();
       setStatus("Listo: tu pedido ha sido enviado con éxito");
-      removeItems();
       setShowLink(true);
     } else {
       setStatus("Error: los mails no coinciden");
+      alert('reiniciando carrito sin razon')
     }
   };
 
@@ -68,6 +68,7 @@ const Checkout = () => {
       })
       .finally(() => {
         setLoading(false);
+        removeItems();
       });
   };
 
@@ -91,61 +92,107 @@ const Checkout = () => {
 
   return (
     <>
-      <form className="form">
-        <label className="form_label">
-          Nombre:
-          <input
-            className="form_input"
-            type="text"
-            placeholder="Nombre y Apellido"
-            onChange={(evt) => {
-              handleChange("name", evt);
-            }}
-          />
-        </label>
-        <label className="form_label">
-          Email:
-          <input
-            className="form_input"
-            type="text"
-            placeholder="Email"
-            onChange={(evt) => {
-              handleChange("email", evt);
-            }}
-          />
-        </label>
-        <label className="form_label">
-          Confirma tu email:
-          <input
-            className="form_input"
-            type="text"
-            placeholder="Repetí tu Email"
-            onChange={(evt) => {
-              handleChange("email2", evt);
-            }}
-          />
-        </label>
-        <label className="form_label">
-          Teléfono:
-          <input
-            className="form_input"
-            type="text"
-            placeholder="Teléfono"
-            onChange={(evt) => {
-              handleChange("phone", evt);
-            }}
-          />
-        </label>
-        {status && <p className="form_error">{status}</p>}
-      </form>
+      {cart.length > 0 ? (
+        <>
+          {" "}
+          <div className="checkout">
+            <form className="form">
+              <label className="form_label">
+                Nombre:
+                <input
+                  className="form_input"
+                  type="text"
+                  placeholder="Nombre y Apellido"
+                  onChange={(evt) => {
+                    handleChange("name", evt);
+                  }}
+                />
+              </label>
+              <label className="form_label">
+                Email:
+                <input
+                  className="form_input"
+                  type="text"
+                  placeholder="Email"
+                  onChange={(evt) => {
+                    handleChange("email", evt);
+                  }}
+                />
+              </label>
+              <label className="form_label">
+                Confirma tu email:
+                <input
+                  className="form_input"
+                  type="text"
+                  placeholder="Repetí tu Email"
+                  onChange={(evt) => {
+                    handleChange("email2", evt);
+                  }}
+                />
+              </label>
+              <label className="form_label">
+                Teléfono:
+                <input
+                  className="form_input"
+                  type="text"
+                  placeholder="Teléfono"
+                  onChange={(evt) => {
+                    handleChange("phone", evt);
+                  }}
+                />
+              </label>
+              {status && <p className="form_error">{status}</p>}
+              <input
+                className="form_btn"
+                type="submit"
+                value="realizar compra"
+                onClick={(e) => handleSubmit(e)}
+                disabled={fieldEmpty()}
+              />
+            </form>
 
-      <input
-        className="form_btn"
-        type="submit"
-        value="realizar compra"
-        onClick={(e) => handleSubmit(e)}
-        disabled={fieldEmpty()}
-      />
+            <table>
+              <tr className="cartTable">
+                <th className="cartTableTitleName">PRODUCTO</th>
+                <td className="cartTableTitleName">PRECIO</td>
+                <td className="cartTableTitleName">CANTIDAD</td>
+                <td className="cartTableTitleName">SUBTOTAL</td>
+              </tr>
+
+              {cart.map((p) => {
+                return (
+                  <>
+                    <tr key={p.id}>
+                      <th>{p.name}</th>
+                      <td className="cartTableInfo">ARS${p.price}</td>
+                      <td className="cartTableInfo">{p.qty}</td>
+                      <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
+                    </tr>
+                  </>
+                );
+              })}
+            </table>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="cart_noProductsMargin">
+            <h2 className="cart_noProductsTitle">
+              El carrito de compras está vacío
+            </h2>
+            <p className="cart_noProductsSubtitle">
+              Usted no tiene artículos en su carrito de compra.
+            </p>
+            <p className="cart_noProductsSubtitle">
+              Click{" "}
+              <Link to={"/"} className="cart_noProductsLink">
+                aquí
+              </Link>{" "}
+              para continuar comprando
+            </p>
+          </div>
+        </>
+      )}
     </>
   );
 };

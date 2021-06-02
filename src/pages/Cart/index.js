@@ -26,7 +26,14 @@ const Cart = () => {
                   return (
                     <>
                       <tr key={p.id}>
-                        <th><NavLink className="cartTableInfo" to={`/item/${p.id}`}>{p.name}</NavLink></th>
+                        <th>
+                          <NavLink
+                            className="cartTableInfo"
+                            to={`/item/${p.id}`}
+                          >
+                            {p.name}
+                          </NavLink>
+                        </th>
                         <td className="cartTableInfo">ARS${p.price}</td>
                         <td className="cartTableInfo">{p.qty}</td>
                         <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
@@ -54,11 +61,9 @@ const Cart = () => {
                 </div>
               </div>
               <div className="cart_final">
-                <button className="cart_btnfinal">
-                  <NavLink to={"/checkout"} className="cart_btnfinal">
-                    Finalizar compra
-                  </NavLink>{" "}
-                </button>
+                <NavLink to={"/checkout"} className="cart_btnFinalMargins">
+                  <button className="cart_btnfinal">Finalizar compra</button>
+                </NavLink>
                 <button
                   className="cart_btnDelete"
                   onClick={() => removeItems()}
