@@ -4,7 +4,7 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
+  const [message, setMessage] = useState("");
   useEffect(() => {
     console.log(cart);
   }, [cart]);
@@ -16,15 +16,19 @@ export const CartProvider = ({ children }) => {
       newCart.forEach((p) => {
         if (p.id === product.id) {
           console.log(p.stock);
-          if (p.qty + qty <= p.stock) {
+          if (p.qty + qty <= product.stock) {
             p.qty += qty;
             console.log("los productos no superaron a los del stock");
+          } else {
+            p.qty = parseInt(product.stock);
+            setMessage("no podes comprar mas productos de este tipo");
+            console.log(p);
           }
-          console.log(p);
-        }
+        } 
       });
 
       setCart(newCart);
+      console.log(newCart);
     } else {
       setCart([...cart, { ...product, qty }]);
     }
@@ -57,6 +61,8 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
+        message,
+        setMessage,
         setCart,
         addToCart,
         getSize,

@@ -32,14 +32,16 @@ const Navbarc = () => {
               {categories.map((category) => {
                 return (
                   <>
-                    <Dropdown.Item>
-                      <NavLink
-                        to={`/category/${category}`}
-                        className="header_categories"
-                      >
-                        {category}
-                      </NavLink>
-                    </Dropdown.Item>
+                    <div key={category.id}>
+                      <Dropdown.Item>
+                        <NavLink
+                          to={`/category/${category}`}
+                          className="header_categories"
+                        >
+                          {category}
+                        </NavLink>
+                      </Dropdown.Item>
+                    </div>
                   </>
                 );
               })}

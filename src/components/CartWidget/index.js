@@ -26,7 +26,7 @@ const CartWidget = () => {
               {cart.map((p) => {
                 return (
                   <>
-                    <div>
+                    <div key={p.id}>
                       <table>
                         <td className="infoTable">{p.name}</td>
                         <td className="infoTable">{p.qty}</td>

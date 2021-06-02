@@ -8,8 +8,8 @@ import "./styles.css";
 const ItemDetail = ({ product }) => {
   const [showButton, setShowButton] = useState(false);
   const history = useHistory();
-  const { addToCart } = useContext(CartContext);
-     
+  const { addToCart, message } = useContext(CartContext);
+
   const onAdd = (count) => {
     console.log(count);
     setShowButton(true);
@@ -27,6 +27,8 @@ const ItemDetail = ({ product }) => {
           <p className="cardDetail_price">ARS${product.price}</p>
           <p className="cardDetail_id">Nº Artículo: {product.id}</p>
           <p className="cardDetail_description">{product.description}</p>
+          <p>{message}</p>
+
           {showButton ? (
             <button
               onClick={() => history.push("/cart")}
@@ -35,7 +37,9 @@ const ItemDetail = ({ product }) => {
               Ir al carrito
             </button>
           ) : (
-            <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+            <>
+              <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+            </>
           )}
         </div>
       </div>
