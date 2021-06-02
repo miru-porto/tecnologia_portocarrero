@@ -42,8 +42,9 @@ const Checkout = () => {
       setStatus("Listo: tu pedido ha sido enviado con éxito");
       setShowLink(true);
     } else {
-      setStatus("Error: los mails no coinciden");
-      alert('reiniciando carrito sin razon')
+      setStatus("Error: los mails no coinciden"); //esto si lo toma
+      console.log(setStatus); //no me toma el console.log
+      alert("reiniciando carrito sin razon"); //esto si lo toma
     }
   };
 
@@ -64,7 +65,7 @@ const Checkout = () => {
         setOrderId(id);
       })
       .catch((err) => {
-        console.log("error buscando la info del comprador", err);
+        console.log("error buscando la información del comprador", err);
       })
       .finally(() => {
         setLoading(false);
@@ -151,7 +152,7 @@ const Checkout = () => {
               />
             </form>
 
-            <table>
+            <table className="cartTableFather">
               <tr className="cartTable">
                 <th className="cartTableTitleName">PRODUCTO</th>
                 <td className="cartTableTitleName">PRECIO</td>

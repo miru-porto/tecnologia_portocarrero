@@ -76,3 +76,7 @@
 .cart_noProductsMargin{
   margin: 60px;
 }
+
+.cartTableFather{
+  height: fit-content;
+}
