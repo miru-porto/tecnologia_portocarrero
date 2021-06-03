@@ -151,6 +151,7 @@ const Checkout = () => {
               />
             </form>
             <div>
+              {/* agregar un titulo: "¡Ultimo paso: completá con tus datos!" */}
               <table className="cartTableFather">
                 <tr className="cartTable">
                   <th className="cartTableTitleName">PRODUCTO</th>
