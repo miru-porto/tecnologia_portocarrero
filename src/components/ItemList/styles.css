@@ -1,6 +1,6 @@
-.cards-container{
-    display: flex;
-    justify-content: center;
-    column-gap: 24px;
-    flex-wrap: wrap;
+.itemList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  column-gap: 30px;
 }
