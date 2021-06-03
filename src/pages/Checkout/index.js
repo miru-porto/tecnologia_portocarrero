@@ -34,8 +34,8 @@ const Checkout = () => {
     return [name, email, email2, phone].includes("");
   };
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const { email, email2 } = form;
     if (email == email2) {
       console.log("el email introducido ha sido confirmado");
