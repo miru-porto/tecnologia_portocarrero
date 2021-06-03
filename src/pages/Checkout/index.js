@@ -150,28 +150,30 @@ const Checkout = () => {
                 disabled={fieldEmpty()}
               />
             </form>
+            <div>
+              <table className="cartTableFather">
+                <tr className="cartTable">
+                  <th className="cartTableTitleName">PRODUCTO</th>
+                  <td className="cartTableTitleName">PRECIO</td>
+                  <td className="cartTableTitleName">CANTIDAD</td>
+                  <td className="cartTableTitleName">SUBTOTAL</td>
+                </tr>
 
-            <table className="cartTableFather">
-              <tr className="cartTable">
-                <th className="cartTableTitleName">PRODUCTO</th>
-                <td className="cartTableTitleName">PRECIO</td>
-                <td className="cartTableTitleName">CANTIDAD</td>
-                <td className="cartTableTitleName">SUBTOTAL</td>
-              </tr>
-
-              {cart.map((p) => {
-                return (
-                  <>
-                    <tr key={p.id}>
-                      <th>{p.name}</th>
-                      <td className="cartTableInfo">ARS${p.price}</td>
-                      <td className="cartTableInfo">{p.qty}</td>
-                      <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
-                    </tr>
-                  </>
-                );
-              })}
-            </table>
+                {cart.map((p) => {
+                  return (
+                    <>
+                      <tr key={p.id}>
+                        <th>{p.name}</th>
+                        <td className="cartTableInfo">ARS${p.price}</td>
+                        <td className="cartTableInfo">{p.qty}</td>
+                        <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
+                      </tr>
+                    </>
+                  );
+                })}
+              </table>
+              <p className="checkout_totalPrice">Total: ${getTotalPrice()}</p>
+            </div>
           </div>
         </>
       ) : (
