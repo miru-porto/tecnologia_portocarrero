@@ -23,7 +23,7 @@ Abrir navegador en http://localhost:3000/
 |/cart|Carrito en el que se muestra un resumen del pedido del cliente.|
 |/checkout|Despacho del cliente, en el que se registra su información en la base de datos.|
 
-## Walkthrough
+## Recorrido
 gif con el recorrido del ecommerce
 
 ## Dependencias
