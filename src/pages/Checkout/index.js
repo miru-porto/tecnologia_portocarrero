@@ -8,7 +8,7 @@ import { CartContext } from "../../context/cartContext";
 import { getFirestore } from "../../firebase";
 
 const Checkout = () => {
-  const [orderId, setOrderId] = useState('');
+  const [orderId, setOrderId] = useState("");
   const [loading, setLoading] = useState("");
   const [showLink, setShowLink] = useState(false);
   const { cart, removeItems, getTotalPrice, getSubtotal } =
@@ -92,7 +92,7 @@ const Checkout = () => {
 
   return (
     <>
-      {(cart.length > 0 && !orderId) ? (
+      {cart.length > 0 && !orderId ? (
         <>
           {" "}
           <div className="checkout">
