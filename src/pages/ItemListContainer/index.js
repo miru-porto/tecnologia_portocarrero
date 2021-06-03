@@ -51,10 +51,16 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="category-image">
-        <p>{(categoryId && `_${categoryId}`) || "Bijou"}</p>
-      </div>
-      {loading ? <Loader /> : <ItemList products={products} />}
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <div className="category-image">
+            <p>{(categoryId && `_${categoryId}`) || "Bijou"}</p>
+          </div>
+          <ItemList products={products} />
+        </>
+      )}
     </>
   );
 };
