@@ -8,7 +8,7 @@ import { CartContext } from "../../context/cartContext";
 import { getFirestore } from "../../firebase";
 
 const Checkout = () => {
-  const [orderId, setOrderId] = useState({});
+  const [orderId, setOrderId] = useState('');
   const [loading, setLoading] = useState("");
   const [showLink, setShowLink] = useState(false);
   const { cart, removeItems, getTotalPrice, getSubtotal } =
@@ -34,7 +34,8 @@ const Checkout = () => {
     return [name, email, email2, phone].includes("");
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
     const { email, email2 } = form;
     if (email == email2) {
       console.log("el email introducido ha sido confirmado");
@@ -42,9 +43,7 @@ const Checkout = () => {
       setStatus("Listo: tu pedido ha sido enviado con éxito");
       setShowLink(true);
     } else {
-      setStatus("Error: los mails no coinciden"); //esto si lo toma
-      console.log(setStatus); //no me toma el console.log
-      alert("reiniciando carrito sin razon"); //esto si lo toma
+      setStatus("Error: los mails no coinciden");
     }
   };
 
@@ -93,7 +92,7 @@ const Checkout = () => {
 
   return (
     <>
-      {cart.length > 0 ? (
+      {(cart.length > 0 && !orderId) ? (
         <>
           {" "}
           <div className="checkout">
