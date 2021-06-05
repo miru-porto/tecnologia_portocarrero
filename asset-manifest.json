@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tecnologia_portocarrero/static/css/main.09c44d87.chunk.css",
+    "main.js": "/tecnologia_portocarrero/static/js/main.ff72f4b6.chunk.js",
+    "main.js.map": "/tecnologia_portocarrero/static/js/main.ff72f4b6.chunk.js.map",
+    "runtime-main.js": "/tecnologia_portocarrero/static/js/runtime-main.081e9971.js",
+    "runtime-main.js.map": "/tecnologia_portocarrero/static/js/runtime-main.081e9971.js.map",
+    "static/css/2.ef9168ec.chunk.css": "/tecnologia_portocarrero/static/css/2.ef9168ec.chunk.css",
+    "static/js/2.b3adba3a.chunk.js": "/tecnologia_portocarrero/static/js/2.b3adba3a.chunk.js",
+    "static/js/2.b3adba3a.chunk.js.map": "/tecnologia_portocarrero/static/js/2.b3adba3a.chunk.js.map",
+    "static/js/3.1fcc36f7.chunk.js": "/tecnologia_portocarrero/static/js/3.1fcc36f7.chunk.js",
+    "static/js/3.1fcc36f7.chunk.js.map": "/tecnologia_portocarrero/static/js/3.1fcc36f7.chunk.js.map",
+    "index.html": "/tecnologia_portocarrero/index.html",
+    "static/css/2.ef9168ec.chunk.css.map": "/tecnologia_portocarrero/static/css/2.ef9168ec.chunk.css.map",
+    "static/css/main.09c44d87.chunk.css.map": "/tecnologia_portocarrero/static/css/main.09c44d87.chunk.css.map",
+    "static/js/2.b3adba3a.chunk.js.LICENSE.txt": "/tecnologia_portocarrero/static/js/2.b3adba3a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.081e9971.js",
+    "static/css/2.ef9168ec.chunk.css",
+    "static/js/2.b3adba3a.chunk.js",
+    "static/css/main.09c44d87.chunk.css",
+    "static/js/main.ff72f4b6.chunk.js"
+  ]
+}
