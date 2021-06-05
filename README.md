@@ -24,7 +24,7 @@ Abrir navegador en http://localhost:3000/
 |/checkout|Despacho del cliente, en el que se registra su información en la base de datos.|
 
 ## Recorrido
-gif con el recorrido del ecommerce
+
 
 ## Dependencias
 
