@@ -1,5 +1,5 @@
 import "./style.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import CartWidget from "../CartWidget";
 import { CartContext } from "../../context/cartContext";
@@ -14,10 +14,10 @@ const Navbarc = () => {
     <>
       <div className="header">
         <div className="header_1">
-          <NavLink to={"/"} className="header_title1">
+          <Link to={"/"} className="header_title1">
             <img src="../images/estrella.png" className="header_logo" />
             <img src="https://ar.todomoda.com/media/wysiwyg/logo_negro_new3.jpg" />
-          </NavLink>
+          </Link>
 
           <CartWidget />
           <p className="header_select">({getSize()})</p>
@@ -34,12 +34,12 @@ const Navbarc = () => {
                   <>
                     <div key={category.id}>
                       <Dropdown.Item>
-                        <NavLink
+                        <Link
                           to={`/category/${category}`}
                           className="header_categories"
                         >
                           {category}
-                        </NavLink>
+                        </Link>
                       </Dropdown.Item>
                     </div>
                   </>

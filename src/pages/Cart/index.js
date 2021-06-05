@@ -1,5 +1,5 @@
 import "./styles.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 
@@ -27,12 +27,12 @@ const Cart = () => {
                     <>
                       <tr key={p.id}>
                         <th>
-                          <NavLink
+                          <Link
                             className="cartTableInfo"
                             to={`/item/${p.id}`}
                           >
                             {p.name}
-                          </NavLink>
+                          </Link>
                         </th>
                         <td className="cartTableInfo">ARS${p.price}</td>
                         <td className="cartTableInfo">{p.qty}</td>
@@ -61,9 +61,9 @@ const Cart = () => {
                 </div>
               </div>
               <div className="cart_final">
-                <NavLink to={"/checkout"} className="cart_btnFinalMargins">
+                <Link to={"/checkout"} className="cart_btnFinalMargins">
                   <button className="cart_btnfinal">Finalizar compra</button>
-                </NavLink>
+                </Link>
                 <button
                   className="cart_btnDelete"
                   onClick={() => removeItems()}
@@ -84,9 +84,9 @@ const Cart = () => {
               </p>
               <p className="cart_noProductsSubtitle">
                 Click{" "}
-                <NavLink to={"/"} className="cart_noProductsLink">
+                <Link to={"/"} className="cart_noProductsLink">
                   aquí
-                </NavLink>{" "}
+                </Link>{" "}
                 para continuar comprando
               </p>
             </div>
