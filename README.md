@@ -24,7 +24,7 @@ Abrir navegador en http://localhost:3000/
 |/checkout|Despacho del cliente, en el que se registra su información en la base de datos.|
 
 ## Recorrido
-
+![](https://github.com/Miranda-777/tecnologia_portocarrero/blob/master/public/gif/recorridoEcommerceBijouterie2021byMirandaPortocarrero.gif)
 
 ## Dependencias
 
