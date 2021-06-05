@@ -95,6 +95,9 @@ const Checkout = () => {
       {cart.length > 0 && !orderId ? (
         <>
           {" "}
+          <p className="checkout_titulo">
+            ¡Ultimo paso: completá con tus datos!
+          </p>
           <div className="checkout">
             <form className="form">
               <label className="form_label">
@@ -151,7 +154,6 @@ const Checkout = () => {
               />
             </form>
             <div>
-              {/* agregar un titulo: "¡Ultimo paso: completá con tus datos!" */}
               <table className="cartTableFather">
                 <tr className="cartTable">
                   <th className="cartTableTitleName">PRODUCTO</th>

@@ -42,51 +42,59 @@
   display: flex;
   margin: auto;
 }
-.form_bienEnviado{
+.form_bienEnviado {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px;
 }
-.form_link{
+.form_link {
   color: #000;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
   text-decoration: underline;
 }
-.form_correcto{
+.form_correcto {
   color: green;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
 }
-.form_orden{
+.form_orden {
   color: #000;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
 }
-
-.checkout{
+.checkout_titulo {
+  text-align: center;
+  margin: 28px 0;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 600;
+}
+.checkout {
   display: flex;
   flex-direction: row;
 }
 
-.cart_noProductsMargin{
+.cart_noProductsMargin {
   margin: 60px;
 }
 
-.cartTableFather{
+.cartTableFather {
   height: fit-content;
 }
 
-.checkout_totalPrice{
+.checkout_totalPrice {
   text-align: center;
+  margin: 0 auto;
   text-transform: uppercase;
   color: #000000;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 48px;
   letter-spacing: 1px;
