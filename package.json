@@ -2,7 +2,7 @@
   "name": "tecnologia_portocarrero",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://miranda-777.github.io/tecnologia_portocarrero",
+  "homepage": "https://miranda-777.github.io/tecnologia_portocarrero/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
