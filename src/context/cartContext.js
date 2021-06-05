@@ -22,7 +22,6 @@ export const CartProvider = ({ children }) => {
           } else {
             p.qty = parseInt(product.stock);
             setMessage(`¡Llevás como máximo ${product.stock} de este producto!`);
-            //llevas como máximo product.stock 
             console.log(p);
           }
         }
