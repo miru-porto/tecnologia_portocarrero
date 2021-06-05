@@ -2,7 +2,7 @@ import "./style.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../../components/ItemList";
-import Error404 from "../../components/Error404";
+import Error404 from "../Error404";
 import Loader from "../../components/Loader";
 import { getFirestore } from "../../firebase";
 

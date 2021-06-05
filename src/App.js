@@ -4,12 +4,12 @@ import Navbar from "./components/Navbar";
 import ItemListContainer from "./pages/ItemListContainer";
 import ItemDetailContainer from "./pages/ItemDetailContainer";
 import Cart from "./pages/Cart";
+import Error404 from "./pages/Error404";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { CartProvider } from "./context/cartContext";
 import Checkout from "./pages/Checkout";
 
 function App() {
-
   return (
     <BrowserRouter>
       <CartProvider>
@@ -33,6 +33,10 @@ function App() {
 
           <Route path="/checkout">
             <Checkout />
+          </Route>
+
+          <Route path="*">
+            <Error404 />
           </Route>
         </Switch>
       </CartProvider>
