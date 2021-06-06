@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tecnologia_portocarrero/static/css/main.09c44d87.chunk.css",
-    "main.js": "/tecnologia_portocarrero/static/js/main.3e10e717.chunk.js",
-    "main.js.map": "/tecnologia_portocarrero/static/js/main.3e10e717.chunk.js.map",
+    "main.js": "/tecnologia_portocarrero/static/js/main.1c1acec1.chunk.js",
+    "main.js.map": "/tecnologia_portocarrero/static/js/main.1c1acec1.chunk.js.map",
     "runtime-main.js": "/tecnologia_portocarrero/static/js/runtime-main.081e9971.js",
     "runtime-main.js.map": "/tecnologia_portocarrero/static/js/runtime-main.081e9971.js.map",
     "static/css/2.ef9168ec.chunk.css": "/tecnologia_portocarrero/static/css/2.ef9168ec.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.ef9168ec.chunk.css",
     "static/js/2.b3adba3a.chunk.js",
     "static/css/main.09c44d87.chunk.css",
-    "static/js/main.3e10e717.chunk.js"
+    "static/js/main.1c1acec1.chunk.js"
   ]
 }
