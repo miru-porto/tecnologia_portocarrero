@@ -15,7 +15,7 @@ function App() {
       <CartProvider>
         <Navbar />
         <Switch>
-          <Route exact path="/tecnologia_portocarrero/">
+          <Route exact path="/">
             <ItemListContainer />
           </Route>
 
