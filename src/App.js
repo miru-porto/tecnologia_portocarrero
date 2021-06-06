@@ -35,9 +35,11 @@ function App() {
             <Checkout />
           </Route>
 
+          {/*
           <Route path="*">
             <Error404 />
           </Route>
+          */}
         </Switch>
       </CartProvider>
     </BrowserRouter>
