@@ -12,7 +12,7 @@ const CartWidget = () => {
         <Link to={"/cart"}>
           <img
             className="cartWidgetContainer_img"
-            src="../images/agregar.png"
+            src="https://firebasestorage.googleapis.com/v0/b/coderhouse-bijouterie.appspot.com/o/agregar.png?alt=media&token=83258dc7-2c0b-4834-9fd7-e0d21f68d10c"
           />
         </Link>
         <div className="modal">
