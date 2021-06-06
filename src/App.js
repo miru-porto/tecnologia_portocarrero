@@ -11,7 +11,7 @@ import Checkout from "./pages/Checkout";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="https://miranda-777.github.io/tecnologia_portocarrero/">
       <CartProvider>
         <Navbar />
         <Switch>
