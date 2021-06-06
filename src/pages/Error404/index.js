@@ -16,7 +16,7 @@ const Error404 = () => {
         </div>
         <div className="detailContainer_btn">
           <button>
-            <Link to={"/"}>
+            <Link to={"/tecnologia_portocarrero"}>
               <p className="detailContainer_btnSon">Ir al inicio</p>
             </Link>
           </button>

@@ -82,7 +82,7 @@ const Checkout = () => {
         <div className="form_bienEnviado">
           <p className="form_correcto">{status}</p>
           <p className="form_orden">Tu orden de compra es: {orderId}</p>
-          <Link to={"/"}>
+          <Link to={"/tecnologia_portocarrero"}>
             <p className="form_link">Volvé a la Home</p>
           </Link>
         </div>
@@ -190,7 +190,10 @@ const Checkout = () => {
             </p>
             <p className="cart_noProductsSubtitle">
               Click{" "}
-              <Link to={"/"} className="cart_noProductsLink">
+              <Link
+                to={"/tecnologia_portocarrero"}
+                className="cart_noProductsLink"
+              >
                 aquí
               </Link>{" "}
               para continuar comprando

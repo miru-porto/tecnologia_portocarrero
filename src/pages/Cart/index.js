@@ -27,10 +27,7 @@ const Cart = () => {
                     <>
                       <tr key={p.id}>
                         <th>
-                          <Link
-                            className="cartTableInfo"
-                            to={`/item/${p.id}`}
-                          >
+                          <Link className="cartTableInfo" to={`/item/${p.id}`}>
                             {p.name}
                           </Link>
                         </th>
@@ -84,7 +81,10 @@ const Cart = () => {
               </p>
               <p className="cart_noProductsSubtitle">
                 Click{" "}
-                <Link to={"/"} className="cart_noProductsLink">
+                <Link
+                  to={"/tecnologia_portocarrero"}
+                  className="cart_noProductsLink"
+                >
                   aquí
                 </Link>{" "}
                 para continuar comprando
