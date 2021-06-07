@@ -3,10 +3,12 @@ import { React } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
   const [message, setMessage] = useState("");
+  
   useEffect(() => {
     console.log(cart);
+    localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (qty, product) => {

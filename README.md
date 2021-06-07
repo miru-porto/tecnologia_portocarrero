@@ -13,6 +13,7 @@ Abrir navegador en http://localhost:3000/
 ## Aclaraciones
 
 -   El diseño está basado en **Todomoda**.
+-   Se agrega **LocalStorage** para mantener el cart cuando se actualice la página.
 
 ## Routes
 |Route| Descripción  |
