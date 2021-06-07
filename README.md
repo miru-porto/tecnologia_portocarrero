@@ -8,7 +8,7 @@ git clone https://github.com/Miranda-777/tecnologia_portocarrero.git
 npm install
 npm start
 ```
-Abrir navegador en http://localhost:3000/
+Abrir navegador en http://localhost:3000/tecnologia_portocarrero
 
 ## Aclaraciones
 
