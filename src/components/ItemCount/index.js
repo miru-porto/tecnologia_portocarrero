@@ -16,7 +16,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   return (
-    <div>
+    <>
       <div className="carHorizonal">
         <p className="carText">CANTIDAD:</p>
         <p className="carCount">{count}</p>
@@ -36,7 +36,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       <button className="carBtnAgregar" onClick={() => onAdd(count)}>
         Comprar
       </button>
-    </div>
+    </>
   );
 };
 

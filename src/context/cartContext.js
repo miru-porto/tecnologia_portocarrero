@@ -3,12 +3,14 @@ import { React } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []);
+  const [cart, setCart] = useState(
+    localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
+  );
   const [message, setMessage] = useState("");
-  
+
   useEffect(() => {
     console.log(cart);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (qty, product) => {
@@ -20,10 +22,11 @@ export const CartProvider = ({ children }) => {
           console.log(p.stock);
           if (p.qty + qty <= product.stock) {
             p.qty += qty;
-            console.log("los productos no superaron a los del stock");
           } else {
             p.qty = parseInt(product.stock);
-            setMessage(`¡Llevás como máximo ${product.stock} de este producto!`);
+            setMessage(
+              `¡Llevás como máximo ${product.stock} de este producto!`
+            );
             console.log(p);
           }
         }

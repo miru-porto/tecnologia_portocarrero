@@ -13,41 +13,37 @@ const Cart = () => {
       <div className="cart">
         {cart.length > 0 ? (
           <>
-            <div>
-              <table>
-                <tr className="cartTable">
-                  <th className="cartTableTitleName">PRODUCTO</th>
-                  <td className="cartTableTitleName">PRECIO</td>
-                  <td className="cartTableTitleName">CANTIDAD</td>
-                  <td className="cartTableTitleName">SUBTOTAL</td>
-                </tr>
+            <table>
+              <tr className="cartTable">
+                <th className="cartTableTitleName">PRODUCTO</th>
+                <td className="cartTableTitleName">PRECIO</td>
+                <td className="cartTableTitleName">CANTIDAD</td>
+                <td className="cartTableTitleName">SUBTOTAL</td>
+              </tr>
 
-                {cart.map((p) => {
-                  return (
-                    <>
-                      <tr key={p.id}>
-                        <th>
-                          <Link className="cartTableInfo" to={`/item/${p.id}`}>
-                            {p.name}
-                          </Link>
-                        </th>
-                        <td className="cartTableInfo">ARS${p.price}</td>
-                        <td className="cartTableInfo">{p.qty}</td>
-                        <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
-                        <td>
-                          <button
-                            className="cartTableBtn"
-                            onClick={() => removeFromCart(p.id)}
-                          >
-                            X
-                          </button>
-                        </td>
-                      </tr>
-                    </>
-                  );
-                })}
-              </table>
-            </div>
+              {cart.map((p) => {
+                return (
+                  <tr key={p.id}>
+                    <th>
+                      <Link className="cartTableInfo" to={`/item/${p.id}`}>
+                        {p.name}
+                      </Link>
+                    </th>
+                    <td className="cartTableInfo">ARS${p.price}</td>
+                    <td className="cartTableInfo">{p.qty}</td>
+                    <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
+                    <td>
+                      <button
+                        className="cartTableBtn"
+                        onClick={() => removeFromCart(p.id)}
+                      >
+                        X
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </table>
 
             <div className="cart_recibo">
               <div className="cart_info">
@@ -71,26 +67,24 @@ const Cart = () => {
             </div>
           </>
         ) : (
-          <>
-            <div>
-              <h2 className="cart_noProductsTitle">
-                El carrito de compras está vacío
-              </h2>
-              <p className="cart_noProductsSubtitle">
-                Usted no tiene artículos en su carrito de compra.
-              </p>
-              <p className="cart_noProductsSubtitle">
-                Click{" "}
-                <Link
-                  to={"/tecnologia_portocarrero"}
-                  className="cart_noProductsLink"
-                >
-                  aquí
-                </Link>{" "}
-                para continuar comprando
-              </p>
-            </div>
-          </>
+          <div>
+            <h2 className="cart_noProductsTitle">
+              El carrito de compras está vacío
+            </h2>
+            <p className="cart_noProductsSubtitle">
+              Usted no tiene artículos en su carrito de compra.
+            </p>
+            <p className="cart_noProductsSubtitle">
+              Click{" "}
+              <Link
+                to={"/tecnologia_portocarrero"}
+                className="cart_noProductsLink"
+              >
+                aquí
+              </Link>{" "}
+              para continuar comprando
+            </p>
+          </div>
         )}
       </div>
     </>

@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setLoading(true);
-    setMessage('');
+    setMessage("");
     const db = getFirestore();
 
     const itemColletion = db.collection("items");
@@ -38,11 +38,7 @@ const ItemDetailContainer = () => {
   }, [itemId]);
 
   if (!product) {
-    return (
-      <>
-        <Error404 />
-      </>
-    );
+    return <Error404 />;
   }
 
   return <>{loading ? <Loader /> : <ItemDetail product={product} />}</>;

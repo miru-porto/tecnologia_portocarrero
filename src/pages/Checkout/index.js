@@ -78,15 +78,13 @@ const Checkout = () => {
 
   if (showLink) {
     return (
-      <>
-        <div className="form_bienEnviado">
-          <p className="form_correcto">{status}</p>
-          <p className="form_orden">Tu orden de compra es: {orderId}</p>
-          <Link to={"/tecnologia_portocarrero"}>
-            <p className="form_link">Volvé a la Home</p>
-          </Link>
-        </div>
-      </>
+      <div className="form_bienEnviado">
+        <p className="form_correcto">{status}</p>
+        <p className="form_orden">Tu orden de compra es: {orderId}</p>
+        <Link to={"/tecnologia_portocarrero"}>
+          <p className="form_link">Volvé a la Home</p>
+        </Link>
+      </div>
     );
   }
 
@@ -94,7 +92,6 @@ const Checkout = () => {
     <>
       {cart.length > 0 && !orderId ? (
         <>
-          {" "}
           <p className="checkout_titulo">
             ¡Ultimo paso: completá con tus datos!
           </p>
@@ -164,14 +161,12 @@ const Checkout = () => {
 
                 {cart.map((p) => {
                   return (
-                    <>
-                      <tr key={p.id}>
-                        <th>{p.name}</th>
-                        <td className="cartTableInfo">ARS${p.price}</td>
-                        <td className="cartTableInfo">{p.qty}</td>
-                        <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
-                      </tr>
-                    </>
+                    <tr key={p.id}>
+                      <th>{p.name}</th>
+                      <td className="cartTableInfo">ARS${p.price}</td>
+                      <td className="cartTableInfo">{p.qty}</td>
+                      <td className="cartTableInfo">ARS${getSubtotal(p)}</td>
+                    </tr>
                   );
                 })}
               </table>
@@ -180,26 +175,24 @@ const Checkout = () => {
           </div>
         </>
       ) : (
-        <>
-          <div className="cart_noProductsMargin">
-            <h2 className="cart_noProductsTitle">
-              El carrito de compras está vacío
-            </h2>
-            <p className="cart_noProductsSubtitle">
-              Usted no tiene artículos en su carrito de compra.
-            </p>
-            <p className="cart_noProductsSubtitle">
-              Click{" "}
-              <Link
-                to={"/tecnologia_portocarrero"}
-                className="cart_noProductsLink"
-              >
-                aquí
-              </Link>{" "}
-              para continuar comprando
-            </p>
-          </div>
-        </>
+        <div className="cart_noProductsMargin">
+          <h2 className="cart_noProductsTitle">
+            El carrito de compras está vacío
+          </h2>
+          <p className="cart_noProductsSubtitle">
+            Usted no tiene artículos en su carrito de compra.
+          </p>
+          <p className="cart_noProductsSubtitle">
+            Click{" "}
+            <Link
+              to={"/tecnologia_portocarrero"}
+              className="cart_noProductsLink"
+            >
+              aquí
+            </Link>{" "}
+            para continuar comprando
+          </p>
+        </div>
       )}
     </>
   );

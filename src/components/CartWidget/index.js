@@ -19,27 +19,25 @@ const CartWidget = () => {
           {cart.length > 0 ? (
             <>
               <table className="infoContainerTable">
-                <td className="infoTable">Producto</td>
-                <td className="infoTable">Cantidad</td>
+                <tr>
+                  <td className="infoTable">Producto</td>
+                  <td className="infoTable">Cantidad</td>
+                </tr>
               </table>
 
               {cart.map((p) => {
                 return (
-                  <>
-                    <div key={p.id}>
-                      <table>
-                        <td className="infoTable">{p.name}</td>
-                        <td className="infoTable">{p.qty}</td>
-                      </table>
-                    </div>
-                  </>
+                  <table key={p.id}>
+                    <tr>
+                      <td className="infoTable">{p.name}</td>
+                      <td className="infoTable">{p.qty}</td>
+                    </tr>
+                  </table>
                 );
               })}
             </>
           ) : (
-            <>
-              <p className="infoNoProducts">Aún no hay productos</p>
-            </>
+            <p className="infoNoProducts">Aún no hay productos</p>
           )}
         </div>
       </div>

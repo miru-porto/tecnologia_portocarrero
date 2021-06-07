@@ -42,11 +42,7 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   if (notFound) {
-    return (
-      <>
-        <Error404 />
-      </>
-    );
+    return <Error404 />;
   }
 
   return (

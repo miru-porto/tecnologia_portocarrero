@@ -17,33 +17,29 @@ const ItemDetail = ({ product }) => {
   };
 
   return (
-    <>
-      <div className="cardDetail">
-        <div className="cardDetail_1">
-          <img className="cardDetail_img" src={product.image} />
-        </div>
-        <div className="cardDetail_info">
-          <h2 className="cardDetail_name">{product.name}</h2>
-          <p className="cardDetail_price">ARS${product.price}</p>
-          <p className="cardDetail_id">Nº Artículo: {product.id}</p>
-          <p className="cardDetail_description">{product.description}</p>
-          {message && <p className="cardDetail_message">{message}</p>}
-
-          {showButton ? (
-            <button
-              onClick={() => history.push("/cart")}
-              className="cardDetail_btn"
-            >
-              Ir al carrito
-            </button>
-          ) : (
-            <>
-              <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
-            </>
-          )}
-        </div>
+    <div className="cardDetail">
+      <div className="cardDetail_1">
+        <img className="cardDetail_img" src={product.image} />
       </div>
-    </>
+      <div className="cardDetail_info">
+        <h2 className="cardDetail_name">{product.name}</h2>
+        <p className="cardDetail_price">ARS${product.price}</p>
+        <p className="cardDetail_id">Nº Artículo: {product.id}</p>
+        <p className="cardDetail_description">{product.description}</p>
+        {message && <p className="cardDetail_message">{message}</p>}
+
+        {showButton ? (
+          <button
+            onClick={() => history.push("/cart")}
+            className="cardDetail_btn"
+          >
+            Ir al carrito
+          </button>
+        ) : (
+          <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+        )}
+      </div>
+    </div>
   );
 };
 
